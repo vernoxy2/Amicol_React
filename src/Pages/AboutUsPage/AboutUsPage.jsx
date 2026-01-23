@@ -13,7 +13,7 @@ const AboutUsPage = () => {
       <Header HeroImg={HeroImg} HeadText={"About Us"}/>
       <AboutUs/>
       <WhyChooseUs/>
-      <IndustriesWeServe/>
+      {/* <IndustriesWeServe/> */}
       <GetInTouch/>
 
     </>

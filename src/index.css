@@ -11,7 +11,7 @@
     @apply text-3xl md:text-5xl font-extrabold font-sofia
   }
   hr{
-    @apply h-[1.5px] rounded-full
+    @apply border-t-[2px] rounded-full
   }
   p{
     @apply font-sans text-textcolor

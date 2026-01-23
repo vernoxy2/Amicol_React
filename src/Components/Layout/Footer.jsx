@@ -39,7 +39,7 @@ const Footer = () => {
                 Let’s connect to collaborate, create impactful projects, and
                 build meaningful professional relationships together.
               </p>
-              <hr className="h-0.5 bg-[#E33534] ms-3" />
+              <hr className=" border-primary ms-3" />
               <div className="ps-3 flex gap-4">
                 {socials.map((s, i) => (
                   <div
@@ -116,7 +116,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <hr className="bg-black h-0.5 mt-10 md:mt-20" />
+          <hr className="border-black mt-10 md:mt-20" />
         </div>
       </div>
     </div>

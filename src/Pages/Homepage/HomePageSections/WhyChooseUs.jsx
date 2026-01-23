@@ -1,6 +1,16 @@
 import React from "react";
 import Icon from "../../../assets/HomePageAssets/icons/Icon1.svg";
 import HIcon from "../../../assets/HomePageAssets/icons/HIcon1.svg";
+import Icon2 from "../../../assets/HomePageAssets/icons/Icon2.svg";
+import HIcon2 from "../../../assets/HomePageAssets/icons/HIcon2.svg";
+import Icon3 from "../../../assets/HomePageAssets/icons/Icon3.svg";
+import HIcon3 from "../../../assets/HomePageAssets/icons/HIcon3.svg";
+import Icon4 from "../../../assets/HomePageAssets/icons/Icon4.svg";
+import HIcon4 from "../../../assets/HomePageAssets/icons/HIcon4.svg";
+import Icon5 from "../../../assets/HomePageAssets/icons/Icon5.svg";
+import HIcon5 from "../../../assets/HomePageAssets/icons/HIcon5.svg";
+import Icon6 from "../../../assets/HomePageAssets/icons/Icon6.svg";
+import HIcon6 from "../../../assets/HomePageAssets/icons/HIcon6.svg";
 
 const data = [
   {
@@ -9,32 +19,32 @@ const data = [
     text: "ISO 9001:2015 Certified Manufacturing",
   },
   {
-    img: Icon,
-    HIcon: HIcon,
+    img: Icon2,
+    HIcon: HIcon2,
 
     text: "30+ Years of Coating Industry Expertise",
   },
   {
-    img: Icon,
-    HIcon: HIcon,
+    img: Icon3,
+    HIcon: HIcon3,
 
     text: "Superior Corrosion Protection",
   },
   {
-    img: Icon,
-    HIcon: HIcon,
+    img: Icon4,
+    HIcon: HIcon4,
 
     text: "Long-Lasting & Cost-Effective Solutions",
   },
   {
-    img: Icon,
-    HIcon: HIcon,
+    img: Icon5,
+    HIcon: HIcon5,
 
     text: "Custom Formulations as per Requirement",
   },
   {
-    img: Icon,
-    HIcon: HIcon,
+    img: Icon6,
+    HIcon: HIcon6,
 
     text: "Trusted by Leading Industrial Clients",
   },

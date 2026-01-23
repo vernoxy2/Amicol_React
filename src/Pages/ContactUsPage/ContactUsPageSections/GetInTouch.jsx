@@ -6,7 +6,7 @@ import ContactForm from "../../../Components/UI/ContactForm";
 
 const GetInTouch = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section className="container">
       {/* Heading */}
       <p className="uppercase text-sm sm:text-base font-bold text-[#E33534] tracking-wide">
         [ Get In Touch ]

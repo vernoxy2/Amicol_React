@@ -8,8 +8,8 @@ const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <header className="w-full border-b border-gray-200 shadow ">
-      <nav className="mx-auto flex  items-center justify-between px-8 p-4 border">
+    <header className="w-full  shadow-2xl ">
+      <nav className="mx-auto flex  items-center justify-between px-8 p-4 ">
         
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
