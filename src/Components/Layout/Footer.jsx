@@ -16,7 +16,7 @@ const pageLinks = ["Home", "About", "Services", "Products", "Contact"];
 
 const Footer = () => {
   return (
-    <div className="bg-textcolor pb-20  relative">
+    <div className="bg-textcolor pb-20 relative">
       {/* Background Logo */}
       <img
         src="/src/assets/Footer.svg"
@@ -24,9 +24,9 @@ const Footer = () => {
         className="absolute bottom-0 right-0 w-[500px] max-w-full"
       />
 
-      <div className="py-10 md:py-20 bg-white rounded-3xl shadow-lg relative z-10 container">
-        <div className="w-11/12 mx-auto">
-          <div className="flex flex-wrap gap-y-6">
+      <div className="py-10 md:py-20 bg-white rounded-3xl shadow-lg relative z-10 w-11/12 container">
+        <div className=" mx-auto">
+          <div className="flex flex-wrap justify-between gap-y-6">
 
             {/* Logo */}
             <div className="md:w-3/12 space-y-3 pr-5 md:pr-14">
@@ -53,7 +53,7 @@ const Footer = () => {
             </div>
 
             {/* Page Links */}
-            <div className="md:w-3/12 pl-3 flex flex-col gap-1">
+            <div className="md:w-3/12 md:pl-20 flex flex-col gap-1">
               <h2 className="text-[#E33534] text-2xl font-extrabold">
                 Page Link
               </h2>
@@ -84,7 +84,7 @@ const Footer = () => {
 
               {/* Address */}
               <div className="flex gap-4">
-                <div className="bg-[#F3F1F1] p-2 text-2xl rounded-full text-[#E33534]">
+                <div className="bg-[#F3F1F1] p-2 text-2xl rounded-full text-[#E33534] h-fit">
                   <PiMapPinAreaFill />
                 </div>
                 <p>
@@ -95,7 +95,7 @@ const Footer = () => {
 
               {/* Phone */}
               <div className="flex gap-4">
-                <div className="bg-[#F3F1F1] p-2 text-2xl rounded-full text-[#E33534]">
+                <div className="bg-[#F3F1F1] p-2 text-2xl rounded-full text-[#E33534] h-fit">
                   <BiSolidPhoneCall />
                 </div>
                 <p>
@@ -106,7 +106,7 @@ const Footer = () => {
 
               {/* Email */}
               <div className="flex gap-4">
-                <div className="bg-[#F3F1F1] p-2 text-2xl rounded-full text-[#E33534]">
+                <div className="bg-[#F3F1F1] p-2 text-2xl rounded-full text-[#E33534] h-fit">
                   <MdEmail />
                 </div>
                 <p className="break-all">
