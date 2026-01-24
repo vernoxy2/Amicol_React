@@ -54,7 +54,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <Link to="/">
-          <img src="/public/Logo.svg" alt="Logo" className="" />
+          <img src="/Logo.svg" alt="Logo" className="" />
         </Link>
 
         {/* Desktop Navigation */}

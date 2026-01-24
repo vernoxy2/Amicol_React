@@ -4,6 +4,7 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { PiMapPinAreaFill } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
+import FooterLogo from "../../assets/Footer.svg";
 
 const socials = [
   { icon: <FaTwitter />, round: "rounded-lg" },
@@ -19,7 +20,7 @@ const Footer = () => {
     <div className="bg-textcolor pb-20 relative">
       {/* Background Logo */}
       <img
-        src="/src/assets/Footer.svg"
+        src={FooterLogo}
         alt="Footer Logo"
         className="absolute bottom-0 right-0 w-[500px] max-w-full"
       />
