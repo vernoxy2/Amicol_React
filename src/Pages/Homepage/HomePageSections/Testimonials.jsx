@@ -35,7 +35,7 @@ const Testimonials = () => {
   return (
     <section
       style={{ backgroundImage: `url(${TestimonialBg})` }}
-      className=" bg-center bg-n0-repeat bg-cover pt-7 pb-44 overflow-hidden"
+      className=" bg-center bg-n0-repeat bg-cover pt-7 pb-44 overflow-hidden mb-28"
     >
       <p className="uppercase text-xl font-bold text-textcolor text-center">
         [ Testimonials ]

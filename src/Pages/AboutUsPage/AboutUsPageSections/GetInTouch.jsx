@@ -4,7 +4,7 @@ import ContactForm from "../../../Components/UI/ContactForm";
 
 const GetInTouch = () => {
   return (
-    <section className="container ">
+    <section className="container pb-40">
       <p className="uppercase text-xl font-bold text-[#E33534]">
         [ Get In Touch ]
       </p>
