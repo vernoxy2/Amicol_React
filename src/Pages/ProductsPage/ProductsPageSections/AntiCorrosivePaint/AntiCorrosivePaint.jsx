@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../../../Components/UI/Header";
 import HeroImg from "../../../../assets/ProjectPageAssets/ProHero.png";
 import MeetProducts from "../../../../Components/UI/MeetProducts";
-import TypesofAntiCorrosivePaints from "./TypesofAnti-CorrosivePaints.JSX";
+import TypesofAntiCorrosivePaints from "./TypesofAntiCorrosivePaints.jsx";
 
 const AntiCorrosiveTypes = [
   "Zinc Chromate Primer",

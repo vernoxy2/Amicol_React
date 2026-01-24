@@ -4,7 +4,6 @@ import HeroImg from "../../../../assets/ProjectPageAssets/ProHero.png";
 import MeetProducts from "../../../../Components/UI/MeetProducts";
 import Polyurethane2k from './Polyurethane2k';
 import Polyurethane2kHB from './Polyurethane2kHB';
-// import TypesofAntiCorrosivePaints from "./TypesofAnti-CorrosivePaints.JSX";
 
 const PolyurethaneTypes = [
   "Zinc Chromate Primer",
