@@ -1,6 +1,6 @@
 import React from "react";
 import Icon from "../../../assets/HomePageAssets/icons/Icon1.svg";
-import HIcon from "../../../assets/HomePageAssets/icons/HIcon1.svg";
+import HIcon from "../../../assets/HomePageAssets/icons/Hicon1.svg";
 import Heand from "../../../assets/AboutUsPageAssets/CoreValues/Heand.png";
 import { CoreValuesData } from "../../../Data/CoreValuesData";
 import { FiEye, FiTarget } from "react-icons/fi";
