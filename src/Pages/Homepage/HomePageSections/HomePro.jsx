@@ -5,7 +5,7 @@ import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 const HomePro = () => {
   return (
-    <section className="container pt-0">
+    <section className="container ">
       <p className="uppercase text-xl font-bold text-primary text-center">
         [ Our Products ]
       </p>

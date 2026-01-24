@@ -1,23 +1,28 @@
-export const TestimonialsData = [
+import Person from "../assets/HomePageAssets/person.svg";
+
+export const TestimonialsData  = [
   {
     id: 1,
-    name: "John Doe",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D&auto=format&fit=crop&w=500&q=60",
+    name: "Rahul Sharma",
+    role: "Business Men",
+    img: Person,
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+      "A reliable name delivering long-lasting protection and premium industrial paints.",
   },
   {
     id: 2,
-    name: "John Doe",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D&auto=format&fit=crop&w=500&q=60",
+    name: "Priya Shah",
+    role: "Real Estate Agent",
+    img: Person,
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+      "Trusted for durable protection and superior-quality industrial coating solutions.",
   },
   {
     id: 3,
     name: "John Doe",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D&auto=format&fit=crop&w=500&q=60",
+    role: "Engineer",
+    img: Person,
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+      "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
   },
 ];

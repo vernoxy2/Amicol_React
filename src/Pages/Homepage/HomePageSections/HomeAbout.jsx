@@ -4,16 +4,25 @@ import AboutBgIon from "../../../assets/HomePageAssets/AboutBgIon.svg";
 
 const HomeAbout = () => {
   return (
-    <section className="container ">
+    <section className=" relative pb-0">
+      {/* Decorative Background Icon */}
+          <img
+            src={AboutBgIon}
+            alt=""
+            className="absolute bottom-16 left-0pointer-events-none  "
+          />
+      <div className="container">
+
+      
       {/* Section Heading */}
       <p className="uppercase text-sm sm:text-base lg:text-xl font-bold text-[#E33534]">
         [ About Us ]
       </p>
       <hr className="my-4 bg-black" />
 
-      <div className="flex flex-col lg:flex-row gap-10 lg:gap-0 items-start">
+      <div className="flex flex-col lg:flex-row gap-10 lg:gap-0 items-start ">
         {/* Content */}
-        <div className="w-full lg:w-5/12 space-y-5 sm:space-y-6 lg:pt-14 relative">
+        <div className="w-full lg:w-5/12 space-y-5 sm:space-y-6 lg:pt-14 ">
           <h1 className="font-extrabold text-[#1E1E1E] leading-tight">
             Our Company Story
           </h1>
@@ -31,12 +40,7 @@ const HomeAbout = () => {
             commitment to long-term protection and quality.
           </p>
 
-          {/* Decorative Background Icon */}
-          <img
-            src={AboutBgIon}
-            alt=""
-            className="absolute -bottom-8 -left-6 w-24 sm:w-32 opacity-30 pointer-events-none"
-          />
+          
         </div>
 
         {/* Image */}
@@ -49,6 +53,7 @@ const HomeAbout = () => {
             />
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

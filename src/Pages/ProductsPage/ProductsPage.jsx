@@ -1,10 +1,13 @@
 import React from 'react';
+import Header from '../../Components/UI/Header';
+import HeroImg from '../../assets/ProjectPageAssets/ProHero.png'
+
 
 const ProductsPage = () => {
   return (
-    <div>
-      Products Page
-    </div>
+    <>
+      <Header HeroImg={HeroImg} HeadText={" Our Products"}/>
+    </>
   );
 }
 
