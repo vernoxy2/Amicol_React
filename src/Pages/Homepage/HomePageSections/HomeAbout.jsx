@@ -4,14 +4,14 @@ import AboutBgIon from "../../../assets/HomePageAssets/AboutBgIon.svg";
 
 const HomeAbout = () => {
   return (
-    <section className=" relative pb-0">
+    <section className="  pb-0">
       {/* Decorative Background Icon */}
+      <div className="container relative">
           <img
             src={AboutBgIon}
             alt=""
-            className="absolute bottom-16 left-0pointer-events-none  "
+            className="absolute bottom-16 left-0pointer-events-none w-[40%] "
           />
-      <div className="container">
 
       
       {/* Section Heading */}
