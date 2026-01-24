@@ -1,16 +1,16 @@
 import React from "react";
 import Icon from "../../../assets/HomePageAssets/icons/Icon1.svg";
-import HIcon from "../../../assets/HomePageAssets/icons/HIcon1.svg";
+import HIcon from "../../../assets/HomePageAssets/icons/Hicon1.svg";
 import Icon2 from "../../../assets/HomePageAssets/icons/Icon2.svg";
-import HIcon2 from "../../../assets/HomePageAssets/icons/HIcon2.svg";
+import HIcon2 from "../../../assets/HomePageAssets/icons/Hicon2.svg";
 import Icon3 from "../../../assets/HomePageAssets/icons/Icon3.svg";
-import HIcon3 from "../../../assets/HomePageAssets/icons/HIcon3.svg";
+import HIcon3 from "../../../assets/HomePageAssets/icons/Hicon3.svg";
 import Icon4 from "../../../assets/HomePageAssets/icons/Icon4.svg";
-import HIcon4 from "../../../assets/HomePageAssets/icons/HIcon4.svg";
+import HIcon4 from "../../../assets/HomePageAssets/icons/Hicon4.svg";
 import Icon5 from "../../../assets/HomePageAssets/icons/Icon5.svg";
-import HIcon5 from "../../../assets/HomePageAssets/icons/HIcon5.svg";
+import HIcon5 from "../../../assets/HomePageAssets/icons/Hicon5.svg";
 import Icon6 from "../../../assets/HomePageAssets/icons/Icon6.svg";
-import HIcon6 from "../../../assets/HomePageAssets/icons/HIcon6.svg";
+import HIcon6 from "../../../assets/HomePageAssets/icons/Hicon6.svg";
 
 const data = [
   {
