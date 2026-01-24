@@ -7,9 +7,9 @@ import ContactUsPage from "./Pages/ContactUsPage/ContactUsPage";
 import ProductsPage from "./Pages/ProductsPage/ProductsPage";
 
 // Product Pages
-import AntiCorrosivePaint from "./Pages/ProductsPage/ProductsPageSections/Anti_Corrosive_Paint/AntiCorrosivePaint.jsx";
-import Polyurethane from "./Pages/ProductsPage/ProductsPageSections/Polyurethane_Paint/Polyurethane.jsx";
-import Epoxy from "./Pages/ProductsPage/ProductsPageSections/Epoxy_Paint/Epoxy.jsx";
+import AntiCorrosivePaint from "./Pages/ProductsPage/ProductsPageSections/AntiCorrosivePaint/AntiCorrosivePaint.jsx";
+import Polyurethane from "./Pages/ProductsPage/ProductsPageSections/PolyurethanePaint/Polyurethane.jsx";
+import Epoxy from "./Pages/ProductsPage/ProductsPageSections/EpoxyPaint/Epoxy.jsx";
 // import Polyurethane2KHB from "./Pages/ProductsPage/Polyurethane2KHB";
 // import Epoxy2K from "./Pages/ProductsPage/Epoxy2K";
 // import Epoxy2KHighBuild from "./Pages/ProductsPage/Epoxy2KHighBuild";
