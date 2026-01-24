@@ -8,7 +8,8 @@ import ProductsPage from "./Pages/ProductsPage/ProductsPage";
 
 // Product Pages
 import AntiCorrosivePaint from "./Pages/ProductsPage/ProductsPageSections/Anti_Corrosive_Paint/AntiCorrosivePaint.jsx";
-// import Polyurethane2K from "./Pages/ProductsPage/Polyurethane2K";
+import Polyurethane from "./Pages/ProductsPage/ProductsPageSections/Polyurethane_Paint/Polyurethane.jsx";
+import Epoxy from "./Pages/ProductsPage/ProductsPageSections/Epoxy_Paint/Epoxy.jsx";
 // import Polyurethane2KHB from "./Pages/ProductsPage/Polyurethane2KHB";
 // import Epoxy2K from "./Pages/ProductsPage/Epoxy2K";
 // import Epoxy2KHighBuild from "./Pages/ProductsPage/Epoxy2KHighBuild";
@@ -32,20 +33,18 @@ const App = () => {
           />
 
           {/* Polyurethane */}
-          {/* <Route
-            path="/products/polyurethane-paint/2k"
-            element={<Polyurethane2K />}
-          />
           <Route
+            path="/products/polyurethane-paint"
+            element={<Polyurethane />}
+          />
+          {/* <Route
             path="/products/polyurethane-paint/2k-hb"
             element={<Polyurethane2KHB />}
           /> */}
 
           {/* Epoxy */}
-          {/* <Route
-            path="/products/epoxy-paint/2k"
-            element={<Epoxy2K />}
-          />
+          <Route path="/products/epoxy-paint" element={<Epoxy />} />
+          {/*
           <Route
             path="/products/epoxy-paint/2k-high-build"
             element={<Epoxy2KHighBuild />}

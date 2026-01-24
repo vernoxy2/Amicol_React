@@ -8,17 +8,17 @@ const MeetProducts = ({ MainText, SubText, typeData }) => {
       </p>
       <hr className="my-4 border-textcolor" />
       {/* Main Content */}
-      <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="w-5/6">
+      <div className="pt-12 grid grid-cols-1 lg:grid-cols-2 ">
+        <div className="w-[78%]">
           <h1>{MainText}</h1>
         </div>
         <div className="flex gap-6 md:gap-12 w-5/6">
-          <div className="w-4 h-full bg-primary rounded-full"></div>
+          <div className="w-3 h-full bg-primary rounded-full"></div>
           <p className="py-3">{SubText}</p>
         </div>
       </div>
       {/* Products types */}
-      <div className="flex flex-wrap gap-4 md:gap-8 pt-6 w-9/12">
+      <div className="flex flex-wrap gap-3 md:gap-6 pt-6 xl:w-11/12 2xl:w-9/12">
         {typeData.map((type, index) => (
           <div
             key={index}
