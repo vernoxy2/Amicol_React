@@ -1,6 +1,6 @@
 import React from "react";
 import TestimonialBg from "../../../assets/HomePageAssets/TestimonialsBg.png";
-import comma from "../../../assets/HomePageAssets/testComaa.svg";
+import comma from "../../../assets/HomePageAssets/TestComaa.svg";
 import { TestimonialsData } from "../../../Data/TestimonialsData";
 import Slider from "react-slick";
 
