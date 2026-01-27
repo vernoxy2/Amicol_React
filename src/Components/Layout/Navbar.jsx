@@ -14,11 +14,11 @@ const products = [
     children: [
       {
         name: "2K Polyurethane Paints",
-        path: "/products/polyurethane-paint#2k",
+        path: "/products/polyurethane-paint#2k-polyurethane-paints",
       },
       {
         name: "2K Polyurethane HB Paints",
-        path: "/products/polyurethane-paint#2k-hb",
+        path: "/products/polyurethane-paint#2k-polyurethane-hb-paints",
       },
     ],
   },
@@ -27,11 +27,11 @@ const products = [
     children: [
       {
         name: "2K Epoxy Paints",
-        path: "/products/epoxy-paint#2k",
+        path: "/products/epoxy-paint#2k-epoxy-paints",
       },
       {
         name: "2K Epoxy High Build Paints",
-        path: "/products/epoxy-paint#2k-high-build",
+        path: "/products/epoxy-paint#2K-epoxy-high-build=paints",
       },
     ],
   },
