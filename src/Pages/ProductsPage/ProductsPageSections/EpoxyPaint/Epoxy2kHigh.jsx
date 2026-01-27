@@ -3,7 +3,7 @@ import { Typeof2KPolyurethaneHBPaintsData } from "../../../../Data/Typeof2KPolyu
 import { ProductCards } from "../../../../Components/UI/ProductCards";
 const Epoxy2kHigh = () => {
   return (
-    <section id="2k" className="bg-[#F4F4F4] py-14 pb-44">
+    <section id="2K-epoxy-high-build=paints" className="bg-[#F4F4F4] py-14 pb-44">
               <h1 className="text-center">2K Epoxy High Build Paints</h1>
               <p className="text-center max-w-lg mx-auto">
                Amicol 2K Polyurethane is a two-part coating that is composed of Acrylic Polyol and an aliphatic isocyanate curing agent.

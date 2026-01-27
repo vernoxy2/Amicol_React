@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Typeof2KPolyurethanePaintsData } from "../../../../Data/Typeof2KPolyurethanePaintsData";
 import { ProductCards } from "../../../../Components/UI/ProductCards";
+import { useLocation } from 'react-router-dom';
 
 const Epoxy2k = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  }, [location]);
+  
   return (
-    <section id="2k" className="bg-[#F4F4F4] py-14 ">
+    <section id="2k-epoxy-paints" className="bg-[#F4F4F4] py-14 ">
           <h1 className="text-center">2K Epoxy Paints</h1>
           <p className="text-center max-w-lg mx-auto">
             Amicol 2K Polyurethane is a two-part coating that is composed of Acrylic
