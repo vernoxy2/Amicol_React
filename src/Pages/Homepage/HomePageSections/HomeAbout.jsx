@@ -4,13 +4,13 @@ import AboutBgIon from "../../../assets/HomePageAssets/AboutBgIon.svg";
 
 const HomeAbout = () => {
   return (
-    <section className="  pb-0">
+    <section className="pb-0">
       {/* Decorative Background Icon */}
-      <div className="container relative">
+      <div className="container relative space-y-2 md:space-y-4">
           <img
             src={AboutBgIon}
             alt=""
-            className="absolute bottom-16 left-0pointer-events-none w-[40%] "
+            className="absolute bottom-16 left-0pointer-events-none w-[40%] hidden lg:block"
           />
 
       
@@ -18,11 +18,11 @@ const HomeAbout = () => {
       <p className="uppercase text-sm sm:text-base lg:text-xl font-bold text-[#E33534]">
         [ About Us ]
       </p>
-      <hr className="my-4 bg-black" />
+      <hr className=" bg-black" />
 
-      <div className="flex flex-col lg:flex-row gap-10 lg:gap-0 items-start ">
+      <div className="flex flex-col lg:flex-row gap-5 md:gap-10 lg:gap-0 items-start ">
         {/* Content */}
-        <div className="w-full lg:w-5/12 space-y-5 sm:space-y-6 lg:pt-14 ">
+        <div className="w-full lg:w-5/12 space-y-3 md:space-y-6 lg:pt-14 ">
           <h1 className="font-extrabold text-[#1E1E1E] leading-tight">
             Our Company Story
           </h1>
@@ -49,7 +49,7 @@ const HomeAbout = () => {
             <img
               src={AboutHero}
               alt="About Us"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 md:w-full h-full object-contain ml-auto"
             />
           </div>
         </div>

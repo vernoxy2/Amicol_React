@@ -40,10 +40,10 @@ const IndustriesWeServe = () => {
       </p>
       <hr className="bg-black" />
       <div className="flex flex-wrap gap-y-4">
-        <div className="md:w-1/2">
+        <div className="lg:w-1/2">
           <h1 className="text-textcolor">We serve the following industries</h1>
         </div>
-        <div className="md:w-1/2 flex">
+        <div className="lg:w-1/2 flex">
           <div className="h-full rounded-full px-0.5 bg-primary mr-6"></div>
           <div className="md:flex space-y-4 justify-between">
             <p className="text-textcolor md:max-w-[75%] max-w-[90%]">
@@ -81,7 +81,7 @@ const IndustriesWeServe = () => {
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {WeServeData.map((data, index) => (
-            <div key={index} className="flex-shrink-0 snap-center w-full md:w-9/12">
+            <div key={index} className="flex-shrink-0 snap-center w-full xl:w-9/12">
               <IndustriesCard
                 Img={data.img}
                 id={data.id}

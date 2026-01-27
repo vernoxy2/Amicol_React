@@ -4,10 +4,10 @@ import AboutImg from "../../../assets/AboutUsPageAssets/AboutImg.png";
 const AboutUs = () => {
   return (
     <section className="container">
-      <p className="uppercase text-xl font-bold text-[#E33534]">[ About Us ]</p>
+      <p className="uppercase font-bold text-[#E33534]">[ About Us ]</p>
       <hr className="border-black" />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-10">
-        <div className="space-y-5 me-16">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 xl:pt-10">
+        <div className="space-y-5 md:me-16">
           <p>
             <span className="font-bold">AMIT CHEMICAL INDUSTRIES</span>, operating under the brand name AMICOL
             Paints, is a leading paint manufacturer in Vapi, Gujarat, and an ISO
@@ -41,7 +41,7 @@ const AboutUs = () => {
           </p>
         </div>
         <div className="h-full w-full flex items-center justify-center">
-          <img src={AboutImg} alt="" className="h-full w-full object-cover" />
+          <img src={AboutImg} alt="" className="h-full w-full object-contain mx-auto" />
         </div>
       </div>
     </section>

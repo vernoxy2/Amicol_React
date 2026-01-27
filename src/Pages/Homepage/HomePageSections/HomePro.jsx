@@ -6,10 +6,10 @@ import { IoIosArrowDroprightCircle } from "react-icons/io";
 const HomePro = () => {
   return (
     <section className="container ">
-      <p className="uppercase text-xl font-bold text-primary text-center">
+      <p className="uppercase font-bold text-primary text-center">
         [ Our Products ]
       </p>
-      <h1 className="text-5xl font-extrabold text-textcolor text-center max-w-2xl mx-auto">
+      <h1 className=" font-extrabold text-textcolor text-center max-w-2xl mx-auto">
         Industrial Paints & Coatings Manufacturer in Vapi
       </h1>
       <p className="text-center text-textcolor max-w-2xl mx-auto">
@@ -23,12 +23,12 @@ const HomePro = () => {
           return (
             <div
               key={index}
-              className=" relative group overflow-hidden"
+              className="h-full w-full relative group overflow-hidden"
             >
               <img
                 src={ProDetails.img}
                 alt=""
-                className="w-full h-full object-cover group-hover:scale-105 duration-300"
+                className="h-full w-full object-cover group-hover:scale-105 duration-300"
               />
               <div className="absolute inset-0 flex flex-col justify-between px-5">
                 <div className=" py-7">

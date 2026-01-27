@@ -22,8 +22,8 @@ const Epoxy2k = () => {
   
   return (
     <section id="2k-epoxy-paints" className="bg-[#F4F4F4] py-14 ">
-          <h1 className="text-center">2K Epoxy Paints</h1>
-          <p className="text-center max-w-lg mx-auto">
+          <h1 className="text-center container">2K Epoxy Paints</h1>
+          <p className="text-center max-w-lg mx-auto container">
             Amicol 2K Polyurethane is a two-part coating that is composed of Acrylic
             Polyol and aromatic isocyanate curing agent.
           </p>
