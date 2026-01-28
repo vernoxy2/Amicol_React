@@ -29,7 +29,7 @@ const Footer = () => {
         className="bg-white rounded-3xl relative z-20 w-[92%] max-w-7xl 
   px-6 py-10 md:px-12 md:py-16 -mt-16 shadow-[0_25px_60px_-12px_rgba(0,0,0,0.5)]"
       >
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
           {/* Logo Section */}
           <div className="space-y-4 text-center sm:text-left">
             <img src="/Logo.svg" alt="Logo" className="w-44 mx-auto sm:mx-0" />

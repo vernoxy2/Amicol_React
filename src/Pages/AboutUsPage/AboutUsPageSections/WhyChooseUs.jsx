@@ -11,19 +11,19 @@ const WhyChooseUs = () => {
       <img
         src={Heand}
         alt={"Core Values"}
-        className="absolute right-0 top-0 "
+        className="absolute right-0 top-0 w-1/2 md:w-auto"
       />
       <div className="container space-y-3 md:space-y-6 relative z-[1]">
-        <p className="uppercase text-xl font-bold text-primary">
+        <p className="uppercase font-bold text-primary">
           [ why choose us ]
         </p>
         <hr className="border-white " />
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 lg:gap-20 relative">
           {/* Vertical Divider (Desktop only) */}
           <span className="hidden lg:block absolute left-1/2  h-44 rounded-full w-1 bg-[#E33534]" />
 
           {/* Vision */}
-          <div className="space-y-5">
+          <div className="space-y-3 md:space-y-5">
             <h1 className="text-white flex items-center gap-3">
               Our Vision
               <FiEye className="text-white" />
@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Mission */}
-          <div className="space-y-5">
+          <div className="space-y-3 md:space-y-5">
             <h1 className="text-white flex items-center gap-3">
               Our Mission
               <FiTarget className="text-white" />

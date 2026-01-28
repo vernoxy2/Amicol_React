@@ -52,10 +52,10 @@ const data = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-black py-32">
+    <section className="bg-black py-14 md:py-32">
       <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
         <div className="space-y-6 md:col-span-2">
-          <p className="uppercase text-xl font-bold text-primary">
+          <p className="uppercase font-bold text-primary">
             [ why choose us ]
           </p>
           <h1 className="text-white">

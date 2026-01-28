@@ -7,13 +7,13 @@ const IndustriesCard = ({ Img, text, title, id }) => {
       {/* Left Section */}
       <div className="w-full sm:w-7/12 bg-primary p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-between relative min-h-[280px] sm:min-h-[320px] md:min-h-[380px] lg:min-h-[420px]">
         <div className="relative z-10">
-          <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 md:mb-5 lg:mb-6 leading-tight pr-8 sm:pr-0">
+          <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold md:mb-5 lg:mb-6 leading-tight pr-8 sm:pr-0">
             {title}
           </h2>
         </div>
         
         {/* Large number watermark */}
-        <div className="absolute -bottom-4 sm:-bottom-8 md:-bottom-10 lg:-bottom-12 -left-2 sm:-left-4 md:-left-6 text-[#FF5150] text-[60px] xs:text-[80px] sm:text-[120px] md:text-[180px] lg:text-[230px] font-bold font-sofia leading-none opacity-40 sm:opacity-50 md:opacity-100 pointer-events-none">
+        <div className="absolute -bottom-4 sm:-bottom-8 md:-bottom-10 lg:-bottom-12 -left-2 sm:-left-4 md:-left-6 text-[#FF5150] text-[230px] font-bold font-sofia leading-none opacity-40 sm:opacity-50 md:opacity-100 pointer-events-none">
           0{id}
         </div>
 
