@@ -27,7 +27,7 @@ const Footer = () => {
 
       <div
         className="bg-white rounded-3xl relative z-20 w-[92%] max-w-7xl 
-  px-6 py-10 md:px-12 md:py-16 -mt-16 shadow-[0_25px_60px_-12px_rgba(0,0,0,0.5)]"
+  px-6 py-10 pb-6 md:px-12 md:py-16 md:pb-6 -mt-16 shadow-[0_25px_60px_-12px_rgba(0,0,0,0.5)]"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
           {/* Logo Section */}
@@ -108,7 +108,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr className="border-black mt-12" />
+        <div>
+          <hr className="border-black mt-12" />
+          <p className="text-center pt-4 text-black/80  mt-auto text-sm">
+            © {new Date().getFullYear()} Developed by @Vernoxy
+          </p>
+        </div>
       </div>
     </div>
   );
