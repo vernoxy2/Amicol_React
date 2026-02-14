@@ -1,5 +1,6 @@
 import React from "react";
 import AboutImg from "../../../assets/AboutUsPageAssets/AboutImg.png";
+import LazyImage from "../../../Components/UI/LazyImage";
 
 const AboutUs = () => {
   return (
@@ -41,7 +42,7 @@ const AboutUs = () => {
           </p>
         </div>
         <div className="h-full w-full flex items-center justify-center">
-          <img src={AboutImg} alt="" className="h-full w-full object-contain mx-auto" />
+          <LazyImage src={AboutImg} alt="" className="h-full w-full object-contain mx-auto" />
         </div>
       </div>
     </section>

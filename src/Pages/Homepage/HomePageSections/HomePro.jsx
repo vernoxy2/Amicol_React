@@ -1,6 +1,7 @@
 import React from "react";
 import { ProductListData } from "../../../Data/ProductListData";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
+import LazyImage from "../../../Components/UI/LazyImage";
 
 
 const HomePro = () => {
@@ -25,7 +26,7 @@ const HomePro = () => {
               key={index}
               className="h-full w-full relative group overflow-hidden"
             >
-              <img
+              <LazyImage
                 src={ProDetails.img}
                 alt=""
                 className="h-full w-full object-cover group-hover:scale-105 duration-300"

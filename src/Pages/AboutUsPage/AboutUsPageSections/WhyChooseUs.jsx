@@ -4,11 +4,12 @@ import HIcon from "../../../assets/HomePageAssets/icons/Hicon1.svg";
 import Heand from "../../../assets/AboutUsPageAssets/CoreValues/Heand.png";
 import { CoreValuesData } from "../../../Data/CoreValuesData";
 import { FiEye, FiTarget } from "react-icons/fi";
+import LazyImage from "../../../Components/UI/LazyImage";
 
 const WhyChooseUs = () => {
   return (
     <section className="bg-black relative py-10">
-      <img
+      <LazyImage
         src={Heand}
         alt={"Core Values"}
         className="absolute right-0 top-0 w-1/2 md:w-auto"
@@ -69,7 +70,7 @@ const WhyChooseUs = () => {
                 <p className="text-2xl font-bold text-primary group-hover:bg-primary group-hover:text-white h-fit rounded-full p-2 duration-500 transition-all ease-in-out">
                   0{cv.id}
                 </p>
-                <img
+                <LazyImage
                   src={cv.img}
                   alt={cv.title}
                   aria-hidden

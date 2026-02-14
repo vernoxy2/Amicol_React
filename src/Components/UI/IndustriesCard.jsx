@@ -1,5 +1,6 @@
 import React from "react";
 import { FaChevronRight } from "react-icons/fa6";
+import LazyImage from "./LazyImage";
 
 const IndustriesCard = ({ Img, text, title, id }) => {
   return (
@@ -32,7 +33,7 @@ const IndustriesCard = ({ Img, text, title, id }) => {
 
       {/* Right Section */}
       <div className="w-full sm:w-5/12 bg-textcolor min-h-[180px] xs:min-h-[200px] sm:min-h-[320px] md:min-h-[380px] lg:min-h-[420px] order-first sm:order-last">
-        <img 
+        <LazyImage 
           src={Img} 
           alt={`${title} industry`} 
           className="w-full h-full object-cover"

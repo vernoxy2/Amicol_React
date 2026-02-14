@@ -1,7 +1,9 @@
+import LazyImage from "./LazyImage";
+
 export const ProductCards = ({ item }) => {
   return (
     <div className="relative duration-300 hover:scale-105">
-      <img
+      <LazyImage
         src={item.img}
         alt={item.title}
         className=" w-full rounded-lg bg-cover"
