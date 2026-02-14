@@ -1,10 +1,11 @@
 import React from "react";
+import LazyImage from "./LazyImage";
 
 const Header = ({ HeadText, HeroImg }) => {
   return (
     <section className="relative h-60 md:h-96 lg:h-[650px] w-full overflow-hidden ">
       {/* Background Image */}
-      <img
+      <LazyImage
         src={HeroImg}
         alt="Hero Background"
         className="absolute inset-0 w-full h-full object-cover"

@@ -1,6 +1,7 @@
 import React from "react";
 import Img from "../../../assets/HomePageAssets/GetInTouch.png"
 import ContactForm from "../../../Components/UI/ContactForm";
+import LazyImage from "../../../Components/UI/LazyImage";
 
 const GetInTouch = () => {
   return (
@@ -14,7 +15,7 @@ const GetInTouch = () => {
           <h1 className="text-textcolor w-[90%]">
             Need the Right Coating for a Critical Application?
           </h1>
-          <img src={Img} alt="" className="mx-auto" />
+          <LazyImage src={Img} alt="" className="mx-auto" />
         </div>
         <ContactForm Btntext={"Speak to a Coating Expert"} />
       </div>

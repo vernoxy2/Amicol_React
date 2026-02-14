@@ -11,6 +11,7 @@ import Icon5 from "../../../assets/HomePageAssets/icons/Icon5.svg";
 import HIcon5 from "../../../assets/HomePageAssets/icons/Hicon5.svg";
 import Icon6 from "../../../assets/HomePageAssets/icons/Icon6.svg";
 import HIcon6 from "../../../assets/HomePageAssets/icons/Hicon6.svg";
+import LazyImage from "../../../Components/UI/LazyImage";
 
 const data = [
   {
@@ -78,7 +79,7 @@ const WhyChooseUs = () => {
             {/* Icon Wrapper */}
             <div className="relative w-14 h-14 sm:w-16 sm:h-16">
               {/* Default Icon */}
-              <img
+              <LazyImage
                 src={d.img}
                 alt=""
                 className="
@@ -90,7 +91,7 @@ const WhyChooseUs = () => {
               />
 
               {/* Hover Icon */}
-              <img
+              <LazyImage
                 src={d.HIcon}
                 alt=""
                 className="

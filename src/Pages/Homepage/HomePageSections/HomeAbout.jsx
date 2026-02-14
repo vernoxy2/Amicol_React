@@ -1,13 +1,14 @@
 import React from "react";
 import AboutHero from "../../../assets/HomePageAssets/HomeAboutImg.png";
 import AboutBgIon from "../../../assets/HomePageAssets/AboutBgIon.svg";
+import LazyImage from "../../../Components/UI/LazyImage";
 
 const HomeAbout = () => {
   return (
     <section className="pb-0">
       {/* Decorative Background Icon */}
       <div className="container relative space-y-2 md:space-y-4">
-          <img
+          <LazyImage
             src={AboutBgIon}
             alt=""
             className="absolute bottom-16 left-0pointer-events-none w-[40%] hidden lg:block"
@@ -46,7 +47,7 @@ const HomeAbout = () => {
         {/* Image */}
         <div className="w-full lg:w-7/12 h-[280px] sm:h-[400px] md:h-[550px] lg:h-[650px]">
           <div className="relative w-full h-full overflow-hidden ">
-            <img
+            <LazyImage
               src={AboutHero}
               alt="About Us"
               className="absolute inset-0 md:w-full h-full object-contain ml-auto"

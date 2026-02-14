@@ -3,6 +3,7 @@ import TestimonialBg from "../../../assets/HomePageAssets/TestimonialsBg.png";
 import comma from "../../../assets/HomePageAssets/TestComaa.svg";
 import { TestimonialsData } from "../../../Data/TestimonialsData";
 import Slider from "react-slick";
+import LazyImage from "../../../Components/UI/LazyImage";
 
 const Testimonials = () => {
   const settings = {
@@ -52,7 +53,7 @@ const Testimonials = () => {
                 <p className="text-textcolor w-[90%] ">{item.review}</p>
 
                 <div className="flex items-center gap-x-6">
-                  <img
+                  <LazyImage
                     src={item.img}
                     alt={item.name}
                     className="w-20 h-20  rounded-full"

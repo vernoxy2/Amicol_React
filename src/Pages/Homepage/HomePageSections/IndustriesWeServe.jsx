@@ -25,7 +25,8 @@ const IndustriesWeServe = () => {
 
   const scrollToCard = (index) => {
     if (scrollContainerRef.current) {
-      const cardWidth = scrollContainerRef.current.scrollWidth / WeServeData.length;
+      const cardWidth =
+        scrollContainerRef.current.scrollWidth / WeServeData.length;
       scrollContainerRef.current.scrollTo({
         left: cardWidth * index,
         behavior: "smooth",
@@ -72,7 +73,7 @@ const IndustriesWeServe = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Slider Container */}
       <div className="relative pt-12 w-full overflow-hidden">
         <div
@@ -81,7 +82,10 @@ const IndustriesWeServe = () => {
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {WeServeData.map((data, index) => (
-            <div key={index} className="flex-shrink-0 snap-center w-full xl:w-9/12">
+            <div
+              key={index}
+              className="flex-shrink-0 snap-center w-full xl:w-9/12"
+            >
               <IndustriesCard
                 Img={data.img}
                 id={data.id}
@@ -91,7 +95,7 @@ const IndustriesWeServe = () => {
             </div>
           ))}
         </div>
-        
+
         {/* Pagination Dots */}
         <div className="flex justify-center gap-2 mt-6">
           {WeServeData.map((_, index) => (
