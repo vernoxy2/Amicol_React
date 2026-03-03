@@ -1,9 +1,10 @@
 import React from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-const PrimaryBtn = ({ Btntext, className = "" }) => {
+const PrimaryBtn = ({ Btntext, className = "", onClick }) => {
   return (
     <button
+      onClick={onClick}
       type="submit"
       className={`bg-[#E33534] text-white 
         px-4 sm:px-6 py-2 sm:py-3 
