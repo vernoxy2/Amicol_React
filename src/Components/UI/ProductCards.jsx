@@ -2,9 +2,15 @@ import { useState } from "react";
 import LazyImage from "./LazyImage";
 import PrimaryBtn from "./PrimaryBtn";
 import { IoCloseCircle } from "react-icons/io5";
+import { useNavigate  } from "react-router-dom";
 
 export const ProductCards = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const navigate = useNavigate();
+const handleContact = () => {
+  navigate("/contact#contact-form");
+};
 
   return (
     <>
@@ -71,6 +77,10 @@ export const ProductCards = ({ item }) => {
                 Use Application
               </h1>
               <p className="text-gray-700 mb-4">{item.application}</p>
+              <PrimaryBtn
+                Btntext="Inquire Now"
+                onClick={handleContact}
+              />
             </div>
           </div>
         </div>

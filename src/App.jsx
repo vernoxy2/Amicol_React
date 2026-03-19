@@ -25,6 +25,10 @@ const Epoxy = lazy(
   () =>
     import("./Pages/ProductsPage/ProductsPageSections/EpoxyPaint/Epoxy.jsx"),
 );
+const OtherPaints = lazy(
+  () =>
+    import("./Pages/ProductsPage/ProductsPageSections/Other_Paints/OtherPaints.jsx"),
+);
 
 const App = () => {
   useEffect(() => {
@@ -71,6 +75,7 @@ const App = () => {
             />
 
             <Route path="/products/epoxy-paint" element={<Epoxy />} />
+            <Route path="/products/other-paints" element={<OtherPaints />} />
           </Routes>
         </Suspense>
       </Layout>
