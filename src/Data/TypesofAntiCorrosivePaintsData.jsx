@@ -1,12 +1,12 @@
 import { Children } from "react";
-import img1 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti11.png";
-import img2 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti11.png";
-import img3 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti11.png";
-import img4 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti11.png";
-import img5 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti11.png";
-import img6 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti11.png";
-import img7 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti11.png";
-import img8 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti11.png";
+import img1 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti111.png";
+import img2 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti111.png";
+import img3 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti111.png";
+import img4 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti111.png";
+import img5 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti111.png";
+import img6 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti111.png";
+import img7 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti111.png";
+import img8 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Anti111.png";
 
 export const TypesofAntiCorrosivePaintsData = [
   {
