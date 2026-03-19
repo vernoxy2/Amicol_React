@@ -37,7 +37,28 @@ const products = [
   },
   {
     name: "Other Paints",
-    path: "/products/other-paints",
+    children: [
+      {
+        name: "Heat Resistant Paints",
+        path: "/products/other-paints#heat-resistant-paints",
+      },
+      {
+        name: "Road Marking Paints",
+        path: "/products/other-paints#road-marking-paints",
+      },
+      {
+        name: "Waterproofing Coatings",
+        path: "/products/other-paints#waterproofing-coatings",
+      },
+      {
+        name: "2K Epoxy Floor Coatings",
+        path: "/products/other-paints#2k-epoxy-floor-coatings",
+      },
+      {
+        name: "Wood Paint and Coatings",
+        path: "/products/other-paints#wood-paint-and-coatings",
+      },
+    ],
   },
 ];
 

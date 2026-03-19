@@ -4,7 +4,7 @@ import { ProductCards } from "../../../../Components/UI/ProductCards";
 const Epoxy2kHigh = () => {
   return (
     <section
-      id="2K-epoxy-high-build=paints"
+      id="2k-epoxy-high-build-paints"
       className="bg-[#F4F4F4] py-14 pb-44"
     >
       <h1 className="text-center container">2K Epoxy High Build Paints</h1>

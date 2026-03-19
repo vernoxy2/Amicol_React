@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { PiMapPinAreaFill } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
 import ContactForm from "../../../Components/UI/ContactForm";
+import { useLocation } from "react-router-dom";
 
 const GetInTouch = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100); // small delay ensures DOM is ready
+      }
+    }
+  }, [location]);
   return (
-    <section className="container">
+    <section id="contact-form" className="container">
       {/* Heading */}
       <p data-aos="fade" data-aos-delay="100" className="uppercase text-sm sm:text-base font-bold text-[#E33534] tracking-wide">
         [ Get In Touch ]
