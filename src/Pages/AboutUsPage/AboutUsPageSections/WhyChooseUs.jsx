@@ -15,7 +15,7 @@ const WhyChooseUs = () => {
         className="absolute right-0 top-0 w-1/2 md:w-auto"
       />
       <div className="container space-y-3 md:space-y-6 relative z-[1]">
-        <p className="uppercase font-bold text-primary">
+        <p data-aos="fade" data-aos-delay="100" className="uppercase font-bold text-primary">
           [ why choose us ]
         </p>
         <hr className="border-white " />
@@ -24,13 +24,13 @@ const WhyChooseUs = () => {
           <span className="hidden lg:block absolute left-1/2  h-44 rounded-full w-1 bg-[#E33534]" />
 
           {/* Vision */}
-          <div className="space-y-3 md:space-y-5">
-            <h1 className="text-white flex items-center gap-3">
+          <div className="space-y-3 md:space-y-5 overflow-hidden">
+            <h1 data-aos="fade-right" data-aos-delay="200" className="text-white flex items-center gap-3">
               Our Vision
               <FiEye className="text-white" />
             </h1>
 
-            <p className="text-sm sm:text-base text-white leading-relaxed max-w-lg">
+            <p data-aos="fade-right" data-aos-delay="300" className="text-sm sm:text-base text-white leading-relaxed max-w-lg">
               To be a globally trusted industrial paint and protective coating
               manufacturer, recognized for delivering high-performance
               anti-corrosive, epoxy, and polyurethane coating solutions that
@@ -40,13 +40,13 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Mission */}
-          <div className="space-y-3 md:space-y-5">
-            <h1 className="text-white flex items-center gap-3">
+          <div className="space-y-3 md:space-y-5 overflow-hidden">
+            <h1 data-aos="fade-right" data-aos-delay="400"  className="text-white flex items-center gap-3">
               Our Mission
               <FiTarget className="text-white" />
             </h1>
 
-            <p className="text-sm sm:text-base text-white leading-relaxed max-w-lg">
+            <p data-aos="fade-right" data-aos-delay="500" className="text-sm sm:text-base text-white leading-relaxed max-w-lg">
               To manufacture industrial paints and protective coatings through
               controlled processes, technical expertise, and application-
               specific formulation while ensuring consistent quality, customer
@@ -56,13 +56,15 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        <h1 className="text-white flex items-center gap-3 pt-8">
+        <h1 data-aos="fade" data-aos-delay="600" className="text-white flex items-center gap-3 pt-8">
           Core Values
           <FiTarget className="text-white" />
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {CoreValuesData.map((cv) => (
+          {CoreValuesData.map((cv, index) => (
             <div
+            data-aos="fade-up"
+            data-aos-delay={700 + index * 100}
               key={cv.id}
               className="bg-white p-3 pr-5 rounded-xl space-y-2 group"
             >
