@@ -8,26 +8,35 @@ export const ProductCards = ({ item }) => {
 
   return (
     <>
-      <div className="relative duration-300 hover:scale-105">
-        <LazyImage
-          src={item.img}
-          alt={item.title}
-          className="h-full w-full rounded-lg bg-cover"
-        />
-        <div className="absolute inset-0 rounded-lg flex flex-col h-full justify-between">
-          <h1 className="text-3xl h-[500px] font-extrabold mb-2 py-5 px-4 md:px-6 text-white md:w-[80%]">
+      <div className="group overflow-hidden">
+        <div className="relative ">
+          <LazyImage
+            src={item.img}
+            alt={item.title}
+            className="w-full bg-cover"
+          />
+          <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+            <div className="w-full overflow-hidden flex items-center justify-center">
+              <button
+                onClick={() => setIsOpen(true)}
+                className="relative overflow-hidden border border-primary text-white px-4 py-2 group/btn transform translate-y-10 opacity-0
+                 group-hover:translate-y-0 group-hover:opacity-100
+                 transition-all duration-500 ease-out delay-150"
+              >
+                <span className="relative z-10">View More</span>
+
+                {/* Background fill */}
+                <span className="absolute inset-0 bg-primary scale-x-0 origin-left transition-transform duration-500 group-hover/btn:scale-x-100"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="flex gap-y-4 flex-col h-full py-5 pb-8 px-4 md:px-6 bg-[#1E1E1E] group-hover:bg-primary transition-colors duration-500 ">
+          <h1 className="text-3xl font-extrabold  text-white md:w-[80%]">
             {item.title}
           </h1>
-
-          <div className="relative px-4 md:px-4 py-2 md:pb-10 h-full bg-[#D9D9D9]/20 backdrop-blur rounded-b-lg space-y-1.5 md:space-y-3">
-            <PrimaryBtn
-              Btntext="View More"
-              onClick={() => setIsOpen(true)}
-              className=" absolute -top-16 right-4"
-            />
-            <p className="text-white">{item.text}</p>
-            <hr className="w-[60%]" />
-          </div>
+          <p className="text-white">{item.text}</p>
+          <hr className="w-[60%]" />
         </div>
       </div>
 
@@ -57,7 +66,10 @@ export const ProductCards = ({ item }) => {
             <div className="w-[4px] bg-primary mx-8 self-stretch rounded-full"></div>
 
             <div className="w-1/2 space-y-6">
-              <h1>{""} <br />Use Application</h1>
+              <h1>
+                {""} <br />
+                Use Application
+              </h1>
               <p className="text-gray-700 mb-4">{item.application}</p>
             </div>
           </div>
