@@ -9,12 +9,12 @@ const Testimonials = () => {
   const settings = {
     // dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 1200,
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     pauseOnHover: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 3500,
     arrows: true,
 
     responsive: [
@@ -38,15 +38,15 @@ const Testimonials = () => {
       style={{ backgroundImage: `url(${TestimonialBg})` }}
       className=" bg-center bg-n0-repeat bg-cover pt-7 pb-44 overflow-hidden mb-28"
     >
-      <p className="uppercase text-xl font-bold text-textcolor text-center">
+      <p data-aos="fade" data-aos-delay="100" className="uppercase text-xl font-bold text-textcolor text-center">
         [ Testimonials ]
       </p>
-      <h1 className="text-center text">Our customers say</h1>
+      <h1 data-aos="fade-up" data-aos-delay="200" className="text-center text">Our customers say</h1>
       {/* Testimonial Cards */}
       <div className="slider-container px-0 container max-w-7xl pt-10">
         <Slider {...settings}>
-          {TestimonialsData.map((item) => (
-            <div key={item.id} className="px-6">
+          {TestimonialsData.map((item, index) => (
+            <div data-aos="zoom-in" data-aos-delay={index * 200} key={item.id} className="px-6">
               <div className="bg-white py-7 px-9 shadow-xl shadow-black space-y-8">
                 <img src={comma} alt="" />
 

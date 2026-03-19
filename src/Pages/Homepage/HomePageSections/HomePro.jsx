@@ -7,13 +7,13 @@ import LazyImage from "../../../Components/UI/LazyImage";
 const HomePro = () => {
   return (
     <section className="container ">
-      <p className="uppercase font-bold text-primary text-center">
+      <p data-aos="fade" data-aos-delay="100" className="uppercase font-bold text-primary text-center">
         [ Our Products ]
       </p>
-      <h1 className=" font-extrabold text-textcolor text-center max-w-2xl mx-auto">
+      <h1 data-aos="fade-up" data-aos-delay="200" className=" font-extrabold text-textcolor text-center max-w-2xl mx-auto">
         Industrial Paints & Coatings Manufacturer in Vapi
       </h1>
-      <p className="text-center text-textcolor max-w-2xl mx-auto">
+      <p data-aos="fade-up" data-aos-delay="300" className="text-center text-textcolor max-w-2xl mx-auto">
         AMICOL Paints offers a comprehensive range of industrial paints and
         protective coatings designed for long-lasting performance in harsh
         industrial environments. Our products are manufactured to international
@@ -23,6 +23,8 @@ const HomePro = () => {
         {ProductListData.map((ProDetails, index) => {
           return (
             <div
+              data-aos="zoom-out"
+              data-aos-delay={400 + index * 100}
               key={index}
               className="h-full w-full relative group overflow-hidden"
             >

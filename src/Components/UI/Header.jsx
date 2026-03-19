@@ -13,7 +13,7 @@ const Header = ({ HeadText, HeroImg }) => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col h-full items-start justify-end pb-4 md:pb-8 container px-0 w-11/12">
-        <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold text-white ">
+        <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" className="text-4xl md:text-6xl lg:text-8xl font-extrabold text-white ">
           {HeadText}
         </h1>
 

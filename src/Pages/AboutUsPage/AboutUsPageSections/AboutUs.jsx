@@ -5,11 +5,11 @@ import LazyImage from "../../../Components/UI/LazyImage";
 const AboutUs = () => {
   return (
     <section className="container">
-      <p className="uppercase font-bold text-[#E33534]">[ About Us ]</p>
+      <p data-aos="fade" data-aos-delay="100" className="uppercase font-bold text-[#E33534]">[ About Us ]</p>
       <hr className="border-black" />
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 xl:pt-10">
         <div className="space-y-5 md:me-16">
-          <p>
+          <p data-aos="fade-up" data-aos-delay="200">
             <span className="font-bold">AMIT CHEMICAL INDUSTRIES</span>, operating under the brand name AMICOL
             Paints, is a leading paint manufacturer in Vapi, Gujarat, and an ISO
             9001:2015 certified company specializing in industrial paints and
@@ -17,7 +17,7 @@ const AboutUs = () => {
             experience in delivering reliable, high-performance coating
             solutions to industries in India and clients across the globe.
           </p>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="300">
             As a trusted anti-corrosive paints manufacturer, we produce a
             comprehensive range of epoxy, polyurethane, chemical-resistant,
             heat-resistant, marine, waterproofing, and floor coatings that meet
@@ -26,7 +26,7 @@ const AboutUs = () => {
             chimneys, and industrial floors from corrosion, chemicals, and harsh
             environments.
           </p>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="400">
             Recognized by customers in Vapi, Gujarat, and international markets,
             AMICOL Paints is known for its custom-formulated coating systems,
             consistent quality, and cost-effective performance. Supported by an
@@ -35,13 +35,13 @@ const AboutUs = () => {
             one of the best paint manufacturers for industrial and
             anti-corrosive applications.
           </p>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="500">
             At AMICOL Paints, we are committed to delivering long-lasting
             protection, superior finishes, and dependable service, building
             strong, long-term partnerships with customers worldwide.
           </p>
         </div>
-        <div className="h-full w-full flex items-center justify-center">
+        <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="1200" className="h-full w-full flex items-center justify-center">
           <LazyImage src={AboutImg} alt="" className="h-full w-full object-contain mx-auto" />
         </div>
       </div>

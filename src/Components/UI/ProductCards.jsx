@@ -8,7 +8,7 @@ export const ProductCards = ({ item }) => {
 
   return (
     <>
-      <div className="group overflow-hidden">
+      <div data-aos-delay="200" data-aos="fade-up" className="group overflow-hidden">
         <div className="relative ">
           <LazyImage
             src={item.img}
