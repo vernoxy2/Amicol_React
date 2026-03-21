@@ -1,5 +1,5 @@
 import React from "react";
-import { Typeof2KPolyurethaneHBPaintsData } from "../../../../Data/Typeof2KPolyurethaneHBPaintsData";
+import { Typeof2KEpoxyHBPaints } from "../../../../Data/Typeof2KEpoxyHBPaints";
 import { ProductCards } from "../../../../Components/UI/ProductCards";
 const Epoxy2kHigh = () => {
   return (
@@ -13,7 +13,7 @@ const Epoxy2kHigh = () => {
         Polyol and an aliphatic isocyanate curing agent.
       </p>
       <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 pt-6">
-        {Typeof2KPolyurethaneHBPaintsData.map((item) => (
+        {Typeof2KEpoxyHBPaints.map((item) => (
           <ProductCards key={item.id} item={item} />
         ))}
       </div>
