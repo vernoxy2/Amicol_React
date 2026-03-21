@@ -6,7 +6,7 @@ import img4 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Img4.pn
 import img5 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Img5.png";
 import img6 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Img6.png";
 import img7 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Img7.png";
-import img8 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/img8.png";
+import img8 from "../assets/ProjectPageAssets/TypesofAntiCorrosivePaints/Img8.png";
 
 export const TypesofAntiCorrosivePaintsData = [
   {
