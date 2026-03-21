@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Typeof2KPolyurethanePaintsData } from "../../../../Data/Typeof2KPolyurethanePaintsData";
+import { Typeof2KEpoxyPaints } from "../../../../Data/Typeof2KEpoxyPaints";
 import { ProductCards } from "../../../../Components/UI/ProductCards";
 import { useLocation } from 'react-router-dom';
 
@@ -28,7 +28,7 @@ const Epoxy2k = () => {
             Polyol and aromatic isocyanate curing agent.
           </p>
           <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 pt-6">
-            {Typeof2KPolyurethanePaintsData.map((item) => (
+            {Typeof2KEpoxyPaints.map((item) => (
               <ProductCards key={item.id} item={item} />
             ))}
           </div>
