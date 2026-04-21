@@ -15,21 +15,23 @@ const CountUp = ({ value, duration = 2 }) => {
       let start = 0;
       const end = parseInt(value);
       if (start === end) return;
-
       let totalMilisekonds = duration * 1000;
       let incrementTime = totalMilisekonds / end;
-
       let timer = setInterval(() => {
         start += 1;
         setCount(start);
         if (start === end) clearInterval(timer);
       }, incrementTime);
-
       return () => clearInterval(timer);
     }
   }, [isInView, value, duration]);
 
-  return <span ref={ref}>{count}{value.includes('+') ? '+' : ''}</span>;
+  return (
+    <span ref={ref}>
+      {count}
+      {value.includes("+") ? "+" : ""}
+    </span>
+  );
 };
 
 const Manufacturing = () => {
@@ -51,9 +53,11 @@ const Manufacturing = () => {
         <hr className="mt-2 border-black" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 items-stretch">
-        {/* Left Side - Image (4 Columns) */}
-        <div className="md:col-span-4 overflow-hidden">
+      {/* GRID: mobile/tab/ipad = stacked, xl(1280px+) = side by side */}
+      <div className="grid grid-cols-1 xl:grid-cols-12 items-stretch">
+
+        {/* Left - Image */}
+        <div className="xl:col-span-4 overflow-hidden h-56 sm:h-72 md:h-96 xl:h-auto">
           <motion.img
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -64,77 +68,77 @@ const Manufacturing = () => {
           />
         </div>
 
-        {/* Right Side - Content (8 Columns) */}
-        <div className="md:col-span-8 flex flex-col justify-center space-y-8 bg-black p-8 md:p-16 relative">
+        {/* Right - Black Content */}
+        <div className="xl:col-span-8 flex flex-col justify-center space-y-6 bg-black px-6 py-10 sm:px-10 sm:py-12 md:px-16 md:py-16 relative overflow-hidden">
+
           {/* Title */}
-          <div>
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-              Our Manufacturing Strength
-            </h2>
-          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+            Our Manufacturing Strength
+          </h2>
 
-          {/* Stats Area with Roller Reveal */}
-          <div className="relative py-10 overflow-hidden min-h-[250px] flex items-center -ml-10 md:-ml-20 w-[calc(100%+2.5rem)] md:w-[calc(100%+5rem)] pr-10 md:pr-20">
-            
-            <div className="relative w-full h-full flex items-center">
-              {/* 1. The Revealed Background (RollerBg) - Starting further left */}
-              <motion.div
-                initial={{ clipPath: "inset(0 100% 0 0)" }}
-                animate={isInView ? { clipPath: "inset(0 12% 0 0)" } : {}}
-                transition={{ duration: 1.5, ease: "easeInOut", delay: 0.5 }}
-                className="absolute inset-y-0 left-0 w-full z-0"
-              >
-                <img 
-                  src={RollerBg} 
-                  alt="Background" 
-                  className="w-full h-full object-fill"
-                />
-              </motion.div>
+          {/* Stats Area */}
+          <div className="relative overflow-hidden" style={{ minHeight: "160px" }}>
 
-              {/* 2. The Numbers (Revealed along with the background) */}
-              <motion.div 
-                initial={{ clipPath: "inset(0 100% 0 0)" }}
-                animate={isInView ? { clipPath: "inset(0 12% 0 0)" } : {}}
-                transition={{ duration: 1.5, ease: "easeInOut", delay: 0.5 }}
-                className="grid grid-cols-3 gap-2 md:gap-6 z-10 relative w-full px-14 md:px-28"
-              >
-                {stats.map((stat, index) => {
-                  const words = stat.label.split(' ');
-                  return (
-                    <div key={index} className="flex flex-col items-center md:items-start">
-                      <div className="mb-2">
-                        <h3 className="text-3xl md:text-6xl font-black text-primary leading-none">
-                          {isInView && <CountUp value={stat.number} />}
-                        </h3>
-                      </div>
-                      <div className="text-primary font-bold uppercase tracking-widest text-[9px] sm:text-[10px] md:text-xs text-center md:text-left leading-tight">
-                        <p>{words.slice(0, 2).join(' ')}</p>
-                        <p>{words.slice(2).join(' ')}</p>
-                      </div>
+            {/* RollerBg revealed */}
+            <motion.div
+              initial={{ clipPath: "inset(0 100% 0 0)" }}
+              animate={isInView ? { clipPath: "inset(0 0% 0 0)" } : {}}
+              transition={{ duration: 1.5, ease: "easeInOut", delay: 0.5 }}
+              className="absolute inset-0 z-0"
+            >
+              <img
+                src={RollerBg}
+                alt=""
+                className="w-full h-full object-fill"
+              />
+            </motion.div>
+
+            {/* Numbers with Circles */}
+            <motion.div
+              initial={{ clipPath: "inset(0 100% 0 0)" }}
+              animate={isInView ? { clipPath: "inset(0 0% 0 0)" } : {}}
+              transition={{ duration: 1.5, ease: "easeInOut", delay: 0.5 }}
+              className="relative z-10 grid grid-cols-3 h-full py-6 sm:py-8 md:py-10"
+            >
+              {stats.map((stat, index) => {
+                const words = stat.label.split(" ");
+                return (
+                  <div key={index} className="flex flex-col items-center justify-center gap-2">
+                    {/* Circle */}
+                    <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 rounded-full border-2 border-primary flex items-center justify-center shrink-0">
+                      <h3 className="text-base sm:text-2xl md:text-4xl font-black text-primary leading-none">
+                        {isInView && <CountUp value={stat.number} />}
+                      </h3>
                     </div>
-                  );
-                })}
-              </motion.div>
+                    {/* Label */}
+                    <div className="text-primary font-bold uppercase tracking-widest text-[8px] sm:text-[10px] md:text-xs text-center leading-tight px-1">
+                      <p>{words.slice(0, 2).join(" ")}</p>
+                      <p>{words.slice(2).join(" ")}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </motion.div>
 
-              {/* 3. Roller Image - Swipes across and revealing everything */}
-              <motion.div
-                initial={{ left: "-5%" }}
-                animate={isInView ? { left: "88%" } : {}}
-                transition={{ duration: 1.5, ease: "easeInOut", delay: 0.5 }}
-                className="absolute top-0 bottom-0 w-40 md:w-64 z-20 flex items-center justify-center pointer-events-none"
-                style={{ top: "50%", transform: "translateY(-50%)" }}
-              >
-                <img 
-                  src={Roller} 
-                  alt="Roller" 
-                  className="w-full h-full object-contain scale-[2.2] md:scale-[3.2]"
-                  style={{ 
-                    filter: "drop-shadow(-10px 0 15px rgba(0,0,0,0.5))",
-                    transformOrigin: "center"
-                  }}
-                />
-              </motion.div>
-            </div>
+            {/* Roller */}
+            <motion.div
+              initial={{ left: "-10%" }}
+              animate={isInView ? { left: "110%" } : {}}
+              transition={{ duration: 1.5, ease: "easeInOut", delay: 0.5 }}
+              className="absolute top-0 bottom-0 z-20 pointer-events-none flex items-center"
+              style={{ width: "clamp(60px, 12vw, 180px)" }}
+            >
+              <img
+                src={Roller}
+                alt="Roller"
+                className="w-full h-full object-contain"
+                style={{
+                  transform: "scale(2)",
+                  transformOrigin: "center",
+                  filter: "drop-shadow(-10px 0 15px rgba(0,0,0,0.5))",
+                }}
+              />
+            </motion.div>
           </div>
 
           {/* Description */}
@@ -143,10 +147,8 @@ const Manufacturing = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
-            <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
-              Our manufacturing facility is equipped with state-of-the-art technology 
-              to ensure the highest quality standards in paint production. We leverage 
-              decades of expertise to deliver innovative coating solutions.
+            <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+              Advanced paint production powered by modern technology, high capacity, strict quality control, and skilled workforce delivering durable, reliable solutions. 
             </p>
           </motion.div>
         </div>
