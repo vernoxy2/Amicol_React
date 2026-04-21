@@ -22,6 +22,7 @@ export default {
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
         sofia: ["Sofia Sans", "sans-serif"],
       },
     },

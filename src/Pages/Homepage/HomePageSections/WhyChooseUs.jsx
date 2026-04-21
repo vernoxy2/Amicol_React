@@ -12,6 +12,7 @@ import HIcon5 from "../../../assets/HomePageAssets/icons/Hicon5.svg";
 import Icon6 from "../../../assets/HomePageAssets/icons/Icon6.svg";
 import HIcon6 from "../../../assets/HomePageAssets/icons/Hicon6.svg";
 import LazyImage from "../../../Components/UI/LazyImage";
+import WhyChooseUsImg from "../../../assets/HomePageAssets/Homepagesection/WhyChooseUsImg.png"
 
 const data = [
   {
@@ -53,16 +54,30 @@ const data = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-black py-14 md:py-32">
+    <section className=" py-14 md:py-32"
+    
+    >
       <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
         <div className="space-y-6 md:col-span-2">
-          <p data-aos="fade" data-aos-delay="100" className="uppercase font-bold text-primary">
+          <p
+            data-aos="fade"
+            data-aos-delay="100"
+            className="uppercase font-bold text-primary"
+          >
             [ why choose us ]
           </p>
-          <h1 data-aos="fade-up" data-aos-delay="200" className="text-white overflow-hidden">
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="text-white overflow-hidden"
+          >
             The Reason People <br /> Trust Us
           </h1>
-          <hr data-aos="fade-up" data-aos-delay="300" className="bg-white w-1/2" />
+          <hr
+            data-aos="fade-up"
+            data-aos-delay="300"
+            className="bg-white w-1/2"
+          />
         </div>
         {data.map((d, i) => (
           <div

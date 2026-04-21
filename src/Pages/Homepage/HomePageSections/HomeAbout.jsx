@@ -40,7 +40,31 @@ const HomeAbout = () => {
             solutions backed by 30+ years of industry expertise and a
             commitment to long-term protection and quality.
           </p>
+ <div className="flex flex-col sm:flex-row items-center gap-14 pt-6">
+              <div className="bg-primary px-8 py-6 rounded-md shadow-xl shadow-primary/20 flex flex-col items-center">
+                <span
+                  className="text-6xl font-extrabold leading-none text-transparent"
+                  style={{ WebkitTextStroke: "1px white" }}
+                >
+                  30+
+                </span>
+                <p className="text-white font-bold text-base mt-1">
+                  Years expertise
+                </p>
+              </div>
 
+              <div className="flex items-center gap-4">
+                <div className="w-[1px] h-32 bg-[#D9D9D9]"></div>
+                <div className="flex flex-col">
+                  <span className="text-5xl font-extrabold leading-none">
+                    1988
+                  </span>
+                  <p className="text-white bg-primary px-3 py-2 rounded-md font-bold text-sm uppercase tracking-widest mt-2">
+                    Established
+                  </p>
+                </div>
+              </div>
+            </div>
           
         </div>
 

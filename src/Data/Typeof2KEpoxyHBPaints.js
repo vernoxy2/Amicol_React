@@ -5,8 +5,9 @@ import img4 from "../assets/ProjectPageAssets/2kEpoxyHBPaints/Img4.png";
 import img5 from "../assets/ProjectPageAssets/2kEpoxyHBPaints/Img5.png";
 import img6 from "../assets/ProjectPageAssets/2kEpoxyHBPaints/Img6.png";
 import img7 from "../assets/ProjectPageAssets/2kEpoxyHBPaints/Img7.png";
-import img8 from "../assets/ProjectPageAssets/2kEpoxyHBPaints/Img5.png";
+import img8 from "../assets/ProjectPageAssets/2kEpoxyHBPaints/Img8.png";
 import img9 from "../assets/ProjectPageAssets/2kEpoxyHBPaints/Img9.png";
+import img10 from "../assets/ProjectPageAssets/2kEpoxyHBPaints/Img10.png"
 
 
 export const Typeof2KEpoxyHBPaints = [
@@ -108,5 +109,16 @@ export const Typeof2KEpoxyHBPaints = [
         ],
         application:
             "Epoxy High-Build Thinner (2K) is used for the dilution of epoxy HB primers such as zinc phosphate and zinc-rich formulations, as well as viscosity adjustment for high-build epoxy coatings including MIO, glass flake, novolac, and silicone hybrids. It ensures smooth flow and leveling in finish epoxy paints and also serves as a reliable cleaning agent for spray equipment, brushes, and rollers used with HB epoxy systems.",
+    },
+     {
+        id: 10,
+        img: img10,
+        title: "2K Epoxy ZN PH HB Primer",
+       text: "A two-component high-build epoxy zinc phosphate primer that requires mixing a base resin with a hardener before application, formulated with zinc phosphate pigment for superior anti-corrosive protection, and designed to deliver a thicker film per coat, reducing the number of coats needed for long-term durability.",
+        Description: [
+           "This two-component epoxy zinc phosphate high-build primer provides excellent corrosion resistance for steel in marine, coastal, and chemical environments, delivering film thicknesses of 75–100 microns per coat; it bonds strongly to blast-cleaned steel, galvanized substrates, aluminium, GRP, and mineral surfaces, and is compatible with epoxy, polyurethane, or acrylic systems. Designed for durability in aggressive industrial atmospheres, it can be applied by spray (airless/airmix), brush, or roller, with certain formulations offering surface tolerance for less-than-perfectly prepared steel.",
+        ],
+        application:
+           "This epoxy zinc phosphate high-build primer is designed for protecting structural steel in marine and coastal zones, pipelines and offshore installations, refineries, chemical plants, and fertilizer complexes, as well as ship loaders, conveyors, silos, storage tanks, and ballast water tanks exposed to aggressive environments."
     },
 ]
