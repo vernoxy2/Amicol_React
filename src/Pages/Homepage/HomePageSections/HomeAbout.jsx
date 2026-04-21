@@ -6,24 +6,27 @@ import LazyImage from "../../../Components/UI/LazyImage";
 
 const HomeAbout = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isTouched, setIsTouched] = useState(false);
+  const isZoomed = isHovered || isTouched;
 
   return (
-    <section className="pb-0 overflow-hidden relative container">
-      {/* Decorative Background Icon */}
-      <div 
-        data-aos="fade-up" 
-        data-aos-duration="1500"
-        data-aos-offset="0"
-        className="absolute -bottom-10 -left-10 pointer-events-none w-[70%] sm:w-[50%] lg:w-[45%] z-0"
-      >
-        <img
-          src={AboutIcon}
-          alt="About Background Icon"
-          className="w-full opacity-40 lg:opacity-60"
-        />
+    // NO overflow-hidden — breaks negative z-index
+    <section className="pb-0 relative container">
+      {/* ── Decorative Background Icon — desktop only ── */}
+      <div className="absolute inset-0 pointer-events-none hidden xl:block">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-offset="0"
+          className="absolute bottom-0 -left-2 translate-y-1/3 w-[45%]"
+          style={{ zIndex: -1 }}
+        >
+          <img src={AboutIcon} alt="" className="w-full opacity-40" />
+        </div>
       </div>
 
-      <div className=" relative space-y-2 md:space-y-10 z-10">
+      {/* ── Main Content ── */}
+      <div className="relative space-y-2 md:space-y-10" style={{ zIndex: 1 }}>
         {/* Section Heading */}
         <p
           data-aos="fade-up"
@@ -34,13 +37,16 @@ const HomeAbout = () => {
         </p>
         <hr className="bg-black" />
 
-        <div className="flex flex-col lg:flex-row gap-5 md:gap-10 lg:gap-0 items-start">
-          {/* Content Column */}
-          <div className="w-full lg:w-5/12 space-y-3 md:space-y-6">
+        {/* Layout:
+            - mobile / iPad Mini / iPad Pro  → flex-col (content top, image bottom)
+            - xl+ desktop only               → flex-row (side by side)         */}
+        <div className="flex flex-col xl:flex-row xl:gap-0 xl:items-start gap-6 md:gap-10">
+          {/* ── Content Column ── */}
+          <div className="w-full xl:w-5/12 space-y-3 md:space-y-6">
             <h1
               data-aos="fade-up"
               data-aos-delay="200"
-              className="font-extrabold text-[#1E1E1E] leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+              className="font-extrabold text-[#1E1E1E] leading-tight text-3xl sm:text-4xl md:text-5xl xl:text-6xl"
             >
               Our Company Story
             </h1>
@@ -48,35 +54,44 @@ const HomeAbout = () => {
             <p
               data-aos="fade-up"
               data-aos-delay="300"
-              className="text-sm sm:text-base md:text-lg text-gray-700 max-w-xl"
+              className="text-sm sm:text-base md:text-lg text-gray-700 w-full"
             >
-              <span className="font-bold uppercase">Amit Chemical Industries</span>, an ISO
-              9001:2015 Certified Company, manufactures Industrial Protective
-              Paints & Coatings, Marine Paints, and Construction Chemicals under
-              the brand AMICOL.
+              <span className="font-bold uppercase">
+                Amit Chemical Industries
+              </span>
+              , an ISO 9001:2015 Certified Company, manufactures Industrial
+              Protective Paints &amp; Coatings, Marine Paints, and Construction
+              Chemicals under the brand AMICOL.
             </p>
 
             <p
               data-aos="fade-up"
               data-aos-delay="400"
-              className="text-sm sm:text-base md:text-lg text-gray-700 max-w-xl"
+              className="text-sm sm:text-base md:text-lg text-gray-700 w-full mb-6"
             >
               Established in 1988, we deliver durable, cost-effective coating
               solutions backed by 30+ years of industry expertise and a
               commitment to long-term protection and quality.
             </p>
 
-            {/* Experience Stats - DECREASED GAP */}
+            {/* ── Stats — centered on mobile/tablet, left on desktop ── */}
             <div
               data-aos="fade-up"
               data-aos-delay="500"
-              className="flex flex-col sm:flex-row items-center pt-6 gap-6 sm:gap-8 lg:gap-6"
+              data-aos-offset="120"
+              className="flex flex-col sm:flex-row items-center justify-center xl:justify-start pt-10 mt-4 gap-6 sm:gap-8 w-full"
             >
               {/* 30+ Box */}
-              <div className="bg-primary px-8 py-6 rounded-md shadow-xl shadow-primary/20 flex flex-col items-center min-w-[180px]">
+              <div
+                className="bg-primary px-8 py-6 rounded-md shadow-xl shadow-primary/20 flex flex-col items-center min-w-[180px]"
+                style={{ position: "relative", zIndex: 2 }}
+              >
                 <span
-                  className="text-6xl font-extrabold leading-none text-transparent"
-                  style={{ WebkitTextStroke: "1px white" }}
+                  className="text-6xl font-extrabold leading-none"
+                  style={{
+                    WebkitTextStroke: "1px white",
+                    WebkitTextFillColor: "transparent",
+                  }}
                 >
                   30+
                 </span>
@@ -85,11 +100,11 @@ const HomeAbout = () => {
                 </p>
               </div>
 
-              {/* Separator Line - Balanced and Closer */}
+              {/* Separator */}
               <div className="w-[1px] h-28 bg-[#D9D9D9] hidden sm:block"></div>
 
-              {/* 1988 Section */}
-              <div className="flex flex-col items-center sm:items-start">
+              {/* 1988 */}
+              <div className="flex flex-col items-center">
                 <span className="text-5xl font-extrabold leading-none text-[#1E1E1E]">
                   1988
                 </span>
@@ -100,25 +115,23 @@ const HomeAbout = () => {
             </div>
           </div>
 
-          {/* Image Column */}
-          <div className="w-full lg:w-7/12 mt-10 lg:mt-0 flex justify-end">
+          <div className="w-full xl:w-7/12 xl:mt-0 flex justify-center xl:justify-end">
             <div
               data-aos="fade-left"
               data-aos-delay="500"
-              className="relative w-full max-w-[700px] h-[300px] sm:h-[450px] md:h-[550px] lg:h-[650px] cursor-pointer"
+              className="w-full xl:max-w-[700px] h-[260px] sm:h-[380px] md:h-[440px] lg:h-[480px] xl:h-[600px] cursor-pointer overflow-hidden rounded-md"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
+              onTouchStart={() => setIsTouched(true)}
+              onTouchEnd={() => setTimeout(() => setIsTouched(false), 600)}
             >
-              {/* Main Image Container */}
-              <div className="w-full h-full overflow-hidden">
-                <img
-                  src={isHovered ? ZoomInImg : AboutHero}
-                  alt="About Us"
-                  className={`w-full h-full object-contain ml-auto transition-all duration-700 ease-in-out ${
-                    isHovered ? "scale-105" : "scale-100"
-                  }`}
-                />
-              </div>
+              <img
+                src={isZoomed ? ZoomInImg : AboutHero}
+                alt="About Us"
+                className={`w-full h-full object-cover transition-all duration-700 ease-in-out ${
+                  isZoomed ? "scale-105" : "scale-100"
+                }`}
+              />
             </div>
           </div>
         </div>
