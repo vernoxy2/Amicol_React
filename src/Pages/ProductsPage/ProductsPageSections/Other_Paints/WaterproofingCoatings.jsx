@@ -4,7 +4,7 @@ import { WaterproofingCoatingsData } from "../../../../Data/WaterproofingCoating
 import { ProductCards } from "../../../../Components/UI/ProductCards";
 
 const WaterproofingCoatings = () => {
- const location = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
     if (location.hash) {
@@ -24,7 +24,8 @@ const WaterproofingCoatings = () => {
     <section id="waterproofing-coatings" className="bg-[#F4F4F4] py-14">
       <h1 className="text-center container">Waterproofing Coatings</h1>
       <p className="text-center max-w-2xl mx-auto container">
-        Amicol 2K Polyurethane is a two-part coating that is composed of Acrylic Polyol and aromatic isocyanate curing agent.
+        Amicol Waterproofing coatings are two-part coatings that are upon drying
+        give a tough flexible and durable finish.
       </p>
 
       <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 pt-6">
@@ -34,6 +35,6 @@ const WaterproofingCoatings = () => {
       </div>
     </section>
   );
-}
+};
 
 export default WaterproofingCoatings;

@@ -9,23 +9,27 @@ export const ProductListData = [
     img: Pro1,
     subtext: "[Single Pack System]",
     name: <>AMICOL ANTI-<br/>CORROSIVE PAINT</>,
+    route: "/products/anti-corrosive-paint",
   },
   {
     id: 2,
     img: Pro2,
     subtext: "[Two Pack System]",
     name: <>AMICOL <br />POLYURETHANE PAINT</>,
+    route: "/products/polyurethane-paint#2k-polyurethane-paints",
   },
   {
     id: 3,
     img: Pro3,
     subtext: "[Two Pack System]",
     name: <>AMICOL <br />POLYURETHANE PAINT</>,
+    route: "/products/epoxy-paint#2k-epoxy-paints",
   },
   {
     id: 4,
     img: Pro4,
     subtext: "[Single/Two Pack System]",
     name: "OTHER PAINTS",
+    route: "/products/other-paints#heat-resistant-paints",
   },
 ];

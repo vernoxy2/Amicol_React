@@ -11,14 +11,14 @@ const HomeAbout = () => {
 
   return (
     // NO overflow-hidden — breaks negative z-index
-    <section className="pb-0 relative container">
+    <section className="pb-20 xl:pb-32 relative container">
       {/* ── Decorative Background Icon — desktop only ── */}
       <div className="absolute inset-0 pointer-events-none hidden xl:block">
         <div
           data-aos="fade-up"
           data-aos-duration="1500"
           data-aos-offset="0"
-          className="absolute bottom-0 -left-2 translate-y-1/3 w-[45%]"
+          className="absolute -bottom-16 -left-2 w-[45%]"
           style={{ zIndex: -1 }}
         >
           <img src={AboutIcon} alt="" className="w-full opacity-40" />
@@ -37,9 +37,6 @@ const HomeAbout = () => {
         </p>
         <hr className="bg-black" />
 
-        {/* Layout:
-            - mobile / iPad Mini / iPad Pro  → flex-col (content top, image bottom)
-            - xl+ desktop only               → flex-row (side by side)         */}
         <div className="flex flex-col xl:flex-row xl:gap-0 xl:items-start gap-6 md:gap-10">
           {/* ── Content Column ── */}
           <div className="w-full xl:w-5/12 space-y-3 md:space-y-6">
@@ -82,17 +79,12 @@ const HomeAbout = () => {
               className="flex flex-col sm:flex-row items-center justify-center xl:justify-start pt-10 mt-4 gap-6 sm:gap-8 w-full"
             >
               {/* 30+ Box */}
+              {/* 30+ Box */}
               <div
                 className="bg-primary px-8 py-6 rounded-md shadow-xl shadow-primary/20 flex flex-col items-center min-w-[180px]"
                 style={{ position: "relative", zIndex: 2 }}
               >
-                <span
-                  className="text-6xl font-extrabold leading-none"
-                  style={{
-                    WebkitTextStroke: "1px white",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
+                <span className="text-6xl font-extrabold leading-none text-white">
                   30+
                 </span>
                 <p className="text-white font-bold text-base mt-1">
@@ -101,14 +93,14 @@ const HomeAbout = () => {
               </div>
 
               {/* Separator */}
-              <div className="w-[1px] h-28 bg-[#D9D9D9] hidden sm:block"></div>
+              <div className="w-[1px] h-28 bg-[#D9D9D9] hidden sm:block "></div>
 
               {/* 1988 */}
               <div className="flex flex-col items-center">
                 <span className="text-5xl font-extrabold leading-none text-[#1E1E1E]">
                   1988
                 </span>
-                <p className="text-white bg-primary px-3 py-2 rounded-md font-bold text-sm uppercase tracking-widest mt-2">
+                <p className="text-white bg-primary px-3 py-2 rounded-md font-bold text-sm tracking-widest mt-2">
                   Established
                 </p>
               </div>
