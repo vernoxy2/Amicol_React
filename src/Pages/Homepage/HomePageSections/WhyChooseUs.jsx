@@ -14,40 +14,52 @@ import HIcon6 from "../../../assets/HomePageAssets/icons/Hicon6.svg";
 import LazyImage from "../../../Components/UI/LazyImage";
 import WhyChooseUsImg from "../../../assets/HomePageAssets/Homepagesection/WhyChooseUsImg.png";
 import HandPiant from "../../../assets/HomePageAssets/Homepagesection/HandPaint.png";
+import Img1 from "../../../assets/HomePageAssets/icons/whychooseus/Img1.svg";
+import Img2 from "../../../assets/HomePageAssets/icons/whychooseus/Img2.svg";
+import Img3 from "../../../assets/HomePageAssets/icons/whychooseus/Img3.svg";
+import Img4 from "../../../assets/HomePageAssets/icons/whychooseus/Img4.svg";
+import Img5 from "../../../assets/HomePageAssets/icons/whychooseus/Img5.svg";
+import Img6 from "../../../assets/HomePageAssets/icons/whychooseus/Img6.svg";
+import ImgRed1 from "../../../assets/HomePageAssets/icons/whychooseus/ImgRed1.svg";
+import ImgRed2 from "../../../assets/HomePageAssets/icons/whychooseus/ImgRed2.svg";
+import ImgRed3 from "../../../assets/HomePageAssets/icons/whychooseus/ImgRed3.svg";
+import ImgRed4 from "../../../assets/HomePageAssets/icons/whychooseus/ImgRed4.svg";
+import ImgRed5 from "../../../assets/HomePageAssets/icons/whychooseus/ImgRed5.svg";
+import ImgRed6 from "../../../assets/HomePageAssets/icons/whychooseus/ImgRed6.svg";
 
 const data = [
   {
-    img: Icon,
-    HIcon: HIcon,
+    img: Img1,
+    HIcon: ImgRed1,
     text: "ISO 9001:2015 Certified Manufacturing",
   },
   {
-    img: Icon2,
-    HIcon: HIcon2,
+    img: Img2,
+    HIcon: ImgRed2,
 
     text: "30+ Years of Coating Industry Expertise",
   },
   {
-    img: Icon3,
-    HIcon: HIcon3,
+    img: Img3,
+    HIcon: ImgRed3,
 
     text: "Superior Corrosion Protection",
   },
   {
-    img: Icon4,
-    HIcon: HIcon4,
+    img: Img4,
+    HIcon: ImgRed4,
 
     text: "Long-Lasting & Cost-Effective Solutions",
   },
   {
-    img: Icon5,
-    HIcon: HIcon5,
+    img: Img5,
+    HIcon: ImgRed5,
 
     text: "Custom Formulations as per Requirement",
   },
   {
-    img: Icon6,
-    HIcon: HIcon6,
+    img: Img6,
+    HIcon: ImgRed6,
 
     text: "Trusted by Leading Industrial Clients",
   },
@@ -56,13 +68,20 @@ const data = [
 const WhyChooseUs = () => {
   return (
     <section className="py-14 md:py-32 bg-black relative overflow-hidden">
-        <div className="absolute right-0 top-0 h-full w-[10%] pointer-events-none">
-          <img
-            src={HandPiant}
-            alt=""
-            className="w-full h-full object-cover object-left"
-          />
-        </div>
+      <div
+        className="absolute right-0 bottom-0 
+  hidden
+  sm:block
+  md:h-full md:w-auto
+  xl:top-0 xl:bottom-auto xl:h-full xl:w-[10%] 
+  pointer-events-none"
+      >
+        <img
+          src={HandPiant}
+          alt=""
+          className="w-full h-full object-cover object-left"
+        />
+      </div>
       <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
         <div className="space-y-6 md:col-span-2">
           <p

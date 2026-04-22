@@ -78,8 +78,6 @@ const HomeAbout = () => {
               data-aos-offset="120"
               className="flex flex-col sm:flex-row items-center justify-center xl:justify-start pt-10 mt-4 gap-6 sm:gap-8 w-full"
             >
-              {/* 30+ Box */}
-              {/* 30+ Box */}
               <div
                 className="bg-primary px-8 py-6 rounded-md shadow-xl shadow-primary/20 flex flex-col items-center min-w-[180px]"
                 style={{ position: "relative", zIndex: 2 }}
