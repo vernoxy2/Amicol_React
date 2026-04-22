@@ -13,7 +13,7 @@ const HomeAbout = () => {
 
   return (
     // NO overflow-hidden — breaks negative z-index
-    <section className="pb-20 xl:pb-32 relative container">
+    <section className="pb-20 xl:pb-32 relative container overflow-x-hidden">
       {/* ── Decorative Background Icon — desktop only ── */}
       <div className="absolute inset-0 pointer-events-none hidden xl:block">
         <div
