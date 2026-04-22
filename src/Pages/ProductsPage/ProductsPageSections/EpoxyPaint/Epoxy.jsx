@@ -27,11 +27,11 @@ const Epoxy = () => {
         typeData={EpoxyTypes}
         MainText={"Amicol Epoxy Paints"}
         SubText={
-          "Our polyurethane paints and coatings deliver outstanding UV resistance, gloss retention, and weather durability, making them suitable for both interior and exterior applications."
+          " High-performance epoxy coatings offer superior corrosion resistance, strong adhesion, chemical protection, and long-lasting durability for industrial, marine, and infrastructure applications in demanding environments."
         }
       />
-      <Epoxy2k/>
-      <Epoxy2kHigh/>
+      <Epoxy2k />
+      <Epoxy2kHigh />
     </>
   );
 };

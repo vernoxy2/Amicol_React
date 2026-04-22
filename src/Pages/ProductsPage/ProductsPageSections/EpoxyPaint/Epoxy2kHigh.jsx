@@ -9,8 +9,8 @@ const Epoxy2kHigh = () => {
     >
       <h1 className="text-center container">2K Epoxy High Build Paints</h1>
       <p className="text-center max-w-lg mx-auto container">
-        Amicol 2K Polyurethane is a two-part coating that is composed of Acrylic
-        Polyol and an aliphatic isocyanate curing agent.
+        Amicol 2K Epoxy High-Build Paints are high solid are two-part coatings
+        that are composed of epoxy resin and a modified polyamine curing agent.
       </p>
       <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 pt-6">
         {Typeof2KEpoxyHBPaints.map((item) => (
