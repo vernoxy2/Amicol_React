@@ -24,7 +24,7 @@ const EpoxyFloorCoatings = () => {
     <section id="2k-epoxy-floor-coatings" className="bg-[#F4F4F4] py-14">
       <h1 className="text-center container">2k Epoxy Floor Coatings</h1>
       <p className="text-center max-w-2xl mx-auto container">
-        Amicol 2K Polyurethane is a two-part coating that is composed of Acrylic Polyol and aromatic isocyanate curing agent.
+        Amicol 2K Epoxy Floor Coatings are two-part coatings that are composed of 100% Epoxy and Polyamine curing agent.
       </p>
 
       <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 pt-6">

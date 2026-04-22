@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Manfacture from "../../../assets/HomePageAssets/manufacture/Manfacture.png";
 import Roller from "../../../assets/HomePageAssets/manufacture/Roller.png";
 import RollerBg from "../../../assets/HomePageAssets/manufacture/RollerBg.png";
-
+import ZoomIn from "../../../assets/HomePageAssets/manufacture/ZoomIn.png"
 const CountUp = ({ value, duration = 2 }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
@@ -46,26 +46,30 @@ const Manufacturing = () => {
 
   return (
     <section className="container overflow-hidden" ref={sectionRef}>
-      <div className="mb-8 pt-16">
-        <p className="uppercase text-xl font-bold text-primary">
+      {/* <div className="mb-8 pt-16"> */}
+        {/* <p className="uppercase text-xl font-bold text-primary">
           [ Our Manufacturing Strength ]
-        </p>
-        <hr className="mt-2 border-black" />
-      </div>
+        </p> */}
+        {/* <hr className="mt-2 border-black" /> */}
+      {/* </div> */}
 
       {/* GRID: mobile/tab/ipad = stacked, xl(1280px+) = side by side */}
       <div className="grid grid-cols-1 xl:grid-cols-12 items-stretch">
 
         {/* Left - Image */}
-        <div className="xl:col-span-4 overflow-hidden h-56 sm:h-72 md:h-96 xl:h-auto">
-          <motion.img
+        <div className="xl:col-span-4 overflow-hidden h-56 sm:h-72 md:h-96 xl:h-auto relative group">
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            src={Manfacture}
-            alt="Manufacturing"
-            className="w-full h-full object-cover"
-          />
+            className="w-full h-full relative overflow-hidden"
+          >
+            <img
+              src={Manfacture}
+              alt="Manufacturing"
+              className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+            />
+          </motion.div>
         </div>
 
         {/* Right - Black Content */}

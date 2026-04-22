@@ -12,7 +12,8 @@ import HIcon5 from "../../../assets/HomePageAssets/icons/Hicon5.svg";
 import Icon6 from "../../../assets/HomePageAssets/icons/Icon6.svg";
 import HIcon6 from "../../../assets/HomePageAssets/icons/Hicon6.svg";
 import LazyImage from "../../../Components/UI/LazyImage";
-import WhyChooseUsImg from "../../../assets/HomePageAssets/Homepagesection/WhyChooseUsImg.png"
+import WhyChooseUsImg from "../../../assets/HomePageAssets/Homepagesection/WhyChooseUsImg.png";
+import HandPiant from "../../../assets/HomePageAssets/Homepagesection/HandPaint.png";
 
 const data = [
   {
@@ -54,9 +55,14 @@ const data = [
 
 const WhyChooseUs = () => {
   return (
-    <section className=" py-14 md:py-32"
-    
-    >
+    <section className="py-14 md:py-32 bg-black relative overflow-hidden">
+        <div className="absolute right-0 top-0 h-full w-[10%] pointer-events-none">
+          <img
+            src={HandPiant}
+            alt=""
+            className="w-full h-full object-cover object-left"
+          />
+        </div>
       <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
         <div className="space-y-6 md:col-span-2">
           <p

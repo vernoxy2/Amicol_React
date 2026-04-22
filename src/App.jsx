@@ -35,6 +35,8 @@ const App = () => {
     AOS.init({
       duration: 800,
       delay: 100,
+      once: false,
+      offset: 50,
       // once: true, // animation runs only once
       easing: "ease-in-out",
     });

@@ -2,11 +2,12 @@ import React from "react";
 import { ProductListData } from "../../../Data/ProductListData";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import LazyImage from "../../../Components/UI/LazyImage";
-
+import { useNavigate } from "react-router-dom";
 
 const HomePro = () => {
+  const navigate = useNavigate();
   return (
-    <section className="container ">
+    <section className="container xl:mt-12 ">
       <p data-aos="fade" data-aos-delay="100" className="uppercase font-bold text-primary text-center">
         [ Our Products ]
       </p>
@@ -26,7 +27,8 @@ const HomePro = () => {
               data-aos="zoom-out"
               data-aos-delay={400 + index * 100}
               key={index}
-              className="h-full w-full relative group overflow-hidden"
+                onClick={() => navigate(ProDetails.route)}  
+              className="h-full w-full relative group overflow-hidden cursor-pointer"
             >
               <LazyImage
                 src={ProDetails.img}
