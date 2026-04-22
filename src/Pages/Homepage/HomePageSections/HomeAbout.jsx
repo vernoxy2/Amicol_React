@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AboutHero from "../../../assets/HomePageAssets/HomeAboutImg.png";
+import AboutHero from "../../../assets/HomePageAssets/HomeAboutus/AboutHero.png";
 import ZoomInImg from "../../../assets/HomePageAssets/HomeAboutus/ZoomInImg.png";
 import AboutIcon from "../../../assets/HomePageAssets/HomeAboutus/AboutIcon.svg";
 import LazyImage from "../../../Components/UI/LazyImage";
@@ -106,22 +106,32 @@ const HomeAbout = () => {
           </div>
 
           <div className="w-full xl:w-7/12 xl:mt-0 flex justify-center xl:justify-end">
+            {/* Space holder with AOS - maintains layout stability */}
             <div
               data-aos="fade-left"
               data-aos-delay="500"
-              className="w-full xl:max-w-[700px] h-[260px] sm:h-[380px] md:h-[440px] lg:h-[480px] xl:h-[600px] cursor-pointer overflow-hidden rounded-md"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              onTouchStart={() => setIsTouched(true)}
-              onTouchEnd={() => setTimeout(() => setIsTouched(false), 600)}
+              className="w-full xl:max-w-[700px] h-[260px] sm:h-[380px] md:h-[440px] lg:h-[480px] xl:h-[600px] relative"
             >
-              <img
-                src={isZoomed ? ZoomInImg : AboutHero}
-                alt="About Us"
-                className={`w-full h-full object-cover transition-all duration-700 ease-in-out ${
-                  isZoomed ? "scale-105" : "scale-100"
+              {/* Animated Container - expands OUTWARDS without pushing other elements */}
+              <div
+                className={`absolute transition-all duration-700 ease-in-out cursor-pointer overflow-hidden rounded-md shadow-black/20 ${
+                  isZoomed
+                    ? "-inset-x-2 -inset-y-4 sm:-inset-x-4 sm:-inset-y-6 z-20 shadow-2xl"
+                    : "inset-0 z-10 shadow-lg"
                 }`}
-              />
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                onTouchStart={() => setIsTouched(true)}
+                onTouchEnd={() => setTimeout(() => setIsTouched(false), 600)}
+              >
+                <img
+                  src={isZoomed ? ZoomInImg : AboutHero}
+                  alt="About Us"
+                  className={`w-full h-full object-cover transition-all duration-700 ease-in-out ${
+                    isZoomed ? "scale-110" : "scale-100"
+                  }`}
+                />
+              </div>
             </div>
           </div>
         </div>
