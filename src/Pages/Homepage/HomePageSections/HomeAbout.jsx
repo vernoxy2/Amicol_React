@@ -3,6 +3,8 @@ import AboutHero from "../../../assets/HomePageAssets/HomeAboutus/AboutHero.png"
 import ZoomInImg from "../../../assets/HomePageAssets/HomeAboutus/ZoomInImg.png";
 import AboutIcon from "../../../assets/HomePageAssets/HomeAboutus/AboutIcon.svg";
 import LazyImage from "../../../Components/UI/LazyImage";
+import ZoomIn from "../../../assets/HomePageAssets/HomeAboutus/ZoomIn.svg";
+import ZoomOut from "../../../assets/HomePageAssets/HomeAboutus/ZoomOut.svg";
 
 const HomeAbout = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -21,17 +23,37 @@ const HomeAbout = () => {
           className="absolute bottom-20 -left-2 w-[45%]"
           style={{ zIndex: -1 }}
         >
-          <img src={AboutIcon} alt="" className="w-full opacity-40" />
+          {/* <img src={AboutIcon} alt="" className="w-full opacity-40" /> */}
+          <style>{`
+   @keyframes iconFloat {
+  0%   { transform: translateY(60px); opacity: 0; }
+  20%  { transform: translateY(0px);  opacity: 0.4; }
+  50%  { transform: translateY(0px);  opacity: 0.4; }
+  80%  { transform: translateY(0px);  opacity: 0.4; }
+  100% { transform: translateY(60px); opacity: 0; }
+}
+    .animate-icon-float {
+      animation: iconFloat 6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+    }
+  `}</style>
+          <img
+            src={AboutIcon}
+            alt=""
+            className="w-full opacity-40 animate-icon-float"
+          />
         </div>
       </div>
 
       {/* ── Main Content ── */}
-      <div className="relative space-y-2 md:space-y-10 -mt-10" style={{ zIndex: 1 }}>
+      <div
+        className="relative space-y-2 md:space-y-10 -mt-10"
+        style={{ zIndex: 1 }}
+      >
         {/* Section Heading */}
         <p
           data-aos="fade-up"
           data-aos-delay="100"
-          className="uppercase text-sm sm:text-base lg:text-xl font-bold text-[#E33534]"
+          className="uppercase text-sm sm:text-base lg:text-xl font-bold text-[#E33534] -translate-y-4"
         >
           [ About Us ]
         </p>
@@ -76,24 +98,15 @@ const HomeAbout = () => {
               data-aos="fade-up"
               data-aos-delay="500"
               data-aos-offset="120"
-              className="flex flex-col sm:flex-row items-center justify-center xl:justify-start pt-10 mt-4 gap-6 sm:gap-8 w-full"
+              className="flex flex-col sm:flex-row items-center justify-center xl:justify-start pt-10 mt-2 gap-6 sm:gap-8 w-full"
             >
               <div
                 className="bg-primary px-8 py-6 rounded-md shadow-xl shadow-primary/20 flex flex-col items-center min-w-[180px]"
                 style={{ position: "relative", zIndex: 2 }}
               >
-                {/* <span className="text-6xl font-extrabold leading-none text-white">
+                <span className="text-6xl font-extrabold leading-none text-white">
                   30+
-                </span> */}
-                <span
-  className="text-6xl font-extrabold leading-none"
-  style={{
-    WebkitTextStroke: "2px white",
-    WebkitTextFillColor: "transparent",
-  }}
->
-  30+
-</span>
+                </span>
                 <p className="text-white font-bold text-base mt-1">
                   Years expertise
                 </p>
@@ -121,11 +134,51 @@ const HomeAbout = () => {
               data-aos-delay="500"
               className="w-full xl:max-w-[700px] h-[260px] sm:h-[380px] md:h-[440px] lg:h-[480px] xl:h-[600px] relative"
             >
+              {/* ── Decorative Zoom Circles (Figma Style) ── */}
+              <div className="absolute -top-24 -right-40 sm:-top-32 sm:-right-52 w-64 h-64 sm:w-96 sm:h-96 pointer-events-none z-0">
+                <style>
+                  {`
+                    @keyframes balloonBreathing {
+      0%   { transform: scale(1);    }
+        30%  { transform: scale(1.12); }
+        50%  { transform: scale(1.12); }
+       70%  { transform: scale(0.88); }
+      90%  { transform: scale(0.88); }
+      100% { transform: scale(1);    }
+  }
+      .animate-balloon {
+      animation: balloonBreathing 18s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+    }
+                  `}
+                </style>
+
+                <div className="relative w-full h-full animate-balloon opacity-[0.21]">
+                  <img
+                    src={ZoomIn}
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-contain"
+                    style={{
+                      filter:
+                        "invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%)",
+                    }}
+                  />
+                  <img
+                    src={ZoomOut}
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-contain"
+                    style={{
+                      filter:
+                        "invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%)",
+                    }}
+                  />
+                </div>
+              </div>
+
               {/* Animated Container - expands DOWNWARDS without pushing other elements */}
               <div
                 className={`absolute top-0 left-0 right-0 transition-all duration-700 ease-in-out cursor-pointer overflow-hidden rounded-md shadow-black/20 ${
                   isZoomed
-                    ? "h-[108%] z-20 shadow-2xl"
+                    ? "h-[115%] z-20 shadow-2xl"
                     : "h-full z-10 shadow-lg"
                 }`}
                 onMouseEnter={() => setIsHovered(true)}
