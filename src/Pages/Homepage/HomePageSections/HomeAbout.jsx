@@ -18,7 +18,7 @@ const HomeAbout = () => {
           data-aos="fade-up"
           data-aos-duration="1500"
           data-aos-offset="0"
-          className="absolute -bottom-16 -left-2 w-[45%]"
+          className="absolute bottom-20 -left-2 w-[45%]"
           style={{ zIndex: -1 }}
         >
           <img src={AboutIcon} alt="" className="w-full opacity-40" />
@@ -26,7 +26,7 @@ const HomeAbout = () => {
       </div>
 
       {/* ── Main Content ── */}
-      <div className="relative space-y-2 md:space-y-10" style={{ zIndex: 1 }}>
+      <div className="relative space-y-2 md:space-y-10 -mt-10" style={{ zIndex: 1 }}>
         {/* Section Heading */}
         <p
           data-aos="fade-up"
@@ -38,7 +38,7 @@ const HomeAbout = () => {
         <hr className="bg-black" />
 
         <div className="flex flex-col xl:flex-row xl:gap-0 xl:items-start gap-6 md:gap-10">
-          {/* ── Content Column ── */}
+          {/* ... content ... */}
           <div className="w-full xl:w-5/12 space-y-3 md:space-y-6">
             <h1
               data-aos="fade-up"
@@ -82,9 +82,18 @@ const HomeAbout = () => {
                 className="bg-primary px-8 py-6 rounded-md shadow-xl shadow-primary/20 flex flex-col items-center min-w-[180px]"
                 style={{ position: "relative", zIndex: 2 }}
               >
-                <span className="text-6xl font-extrabold leading-none text-white">
+                {/* <span className="text-6xl font-extrabold leading-none text-white">
                   30+
-                </span>
+                </span> */}
+                <span
+  className="text-6xl font-extrabold leading-none"
+  style={{
+    WebkitTextStroke: "2px white",
+    WebkitTextFillColor: "transparent",
+  }}
+>
+  30+
+</span>
                 <p className="text-white font-bold text-base mt-1">
                   Years expertise
                 </p>
@@ -112,12 +121,12 @@ const HomeAbout = () => {
               data-aos-delay="500"
               className="w-full xl:max-w-[700px] h-[260px] sm:h-[380px] md:h-[440px] lg:h-[480px] xl:h-[600px] relative"
             >
-              {/* Animated Container - expands OUTWARDS without pushing other elements */}
+              {/* Animated Container - expands DOWNWARDS without pushing other elements */}
               <div
-                className={`absolute transition-all duration-700 ease-in-out cursor-pointer overflow-hidden rounded-md shadow-black/20 ${
+                className={`absolute top-0 left-0 right-0 transition-all duration-700 ease-in-out cursor-pointer overflow-hidden rounded-md shadow-black/20 ${
                   isZoomed
-                    ? "-inset-x-2 -inset-y-4 sm:-inset-x-4 sm:-inset-y-6 z-20 shadow-2xl"
-                    : "inset-0 z-10 shadow-lg"
+                    ? "h-[108%] z-20 shadow-2xl"
+                    : "h-full z-10 shadow-lg"
                 }`}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
