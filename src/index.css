@@ -4,6 +4,9 @@
 @tailwind utilities;
 
 @layer base {
+  html, body {
+    @apply overflow-x-hidden w-full;
+  }
   section {
     @apply py-10 md:py-20 space-y-3 md:space-y-6;
   }
