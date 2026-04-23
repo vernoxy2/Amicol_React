@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Manfacture from "../../../assets/HomePageAssets/manufacture/Manfacture.png";
 import Roller from "../../../assets/HomePageAssets/manufacture/Roller.png";
 import RollerBg from "../../../assets/HomePageAssets/manufacture/RollerBg.png";
-import ZoomIn from "../../../assets/HomePageAssets/manufacture/ZoomIn.png"
+import ZoomIn from "../../../assets/HomePageAssets/manufacture/ZoomIn.png";
 const CountUp = ({ value, duration = 2 }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
@@ -46,16 +46,8 @@ const Manufacturing = () => {
 
   return (
     <section className="container overflow-hidden" ref={sectionRef}>
-      {/* <div className="mb-8 pt-16"> */}
-        {/* <p className="uppercase text-xl font-bold text-primary">
-          [ Our Manufacturing Strength ]
-        </p> */}
-        {/* <hr className="mt-2 border-black" /> */}
-      {/* </div> */}
-
       {/* GRID: mobile/tab/ipad = stacked, xl(1280px+) = side by side */}
       <div className="grid grid-cols-1 xl:grid-cols-12 items-stretch">
-
         {/* Left - Image */}
         <div className="xl:col-span-4 overflow-hidden h-56 sm:h-72 md:h-96 xl:h-auto relative group">
           <motion.div
@@ -74,15 +66,16 @@ const Manufacturing = () => {
 
         {/* Right - Black Content */}
         <div className="xl:col-span-8 flex flex-col justify-center space-y-6 bg-black px-6 py-10 sm:px-10 sm:py-12 md:px-16 md:py-16 relative overflow-hidden">
-
           {/* Title */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
             Our Manufacturing Strength
           </h2>
 
           {/* Stats Area */}
-          <div className="relative overflow-hidden" style={{ minHeight: "160px" }}>
-
+          <div
+            className="relative overflow-hidden"
+            style={{ minHeight: "160px" }}
+          >
             {/* RollerBg revealed */}
             <motion.div
               initial={{ clipPath: "inset(0 100% 0 0)" }}
@@ -107,7 +100,10 @@ const Manufacturing = () => {
               {stats.map((stat, index) => {
                 const words = stat.label.split(" ");
                 return (
-                  <div key={index} className="flex flex-col items-center justify-center gap-2">
+                  <div
+                    key={index}
+                    className="flex flex-col items-center justify-center gap-2"
+                  >
                     {/* Circle */}
                     <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 rounded-full border-2 border-primary flex items-center justify-center shrink-0">
                       <h3 className="text-base sm:text-2xl md:text-4xl font-black text-primary leading-none">
@@ -146,14 +142,32 @@ const Manufacturing = () => {
           </div>
 
           {/* Description */}
+          {/* <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 1.2 }}
+          >
+            
+            <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+              Advanced paint production powered by modern technology, high capacity, strict quality control, and skilled workforce delivering durable, reliable solutions. 
+            </p>
+          </motion.div> */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              Advanced paint production powered by modern technology, high capacity, strict quality control, and skilled workforce delivering durable, reliable solutions. 
-            </p>
+            <div className="flex items-stretch gap-4">
+              <div className="w-[3px]bg-[#E33534] self-stretch shrink-0"></div>
+              {/* <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                Advanced paint production powered by modern technology, high
+                capacity, strict quality control, and skilled workforce
+                delivering durable, reliable solutions.
+              </p> */}
+              <p className="text-gray-300 text-base md:text-lg leading-relaxed border-l-2 border-[#E33534] pl-4">
+    Advanced paint production powered by modern technology, high capacity, strict quality control, and skilled workforce delivering durable, reliable solutions.
+  </p>
+            </div>
           </motion.div>
         </div>
       </div>
