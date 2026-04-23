@@ -140,18 +140,6 @@ const Manufacturing = () => {
               />
             </motion.div>
           </div>
-
-          {/* Description */}
-          {/* <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 1.2 }}
-          >
-            
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              Advanced paint production powered by modern technology, high capacity, strict quality control, and skilled workforce delivering durable, reliable solutions. 
-            </p>
-          </motion.div> */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -159,14 +147,11 @@ const Manufacturing = () => {
           >
             <div className="flex items-stretch gap-4">
               <div className="w-[3px]bg-[#E33534] self-stretch shrink-0"></div>
-              {/* <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+              <p className="text-gray-300 text-base md:text-lg leading-relaxed border-l-2 border-[#E33534] pl-4">
                 Advanced paint production powered by modern technology, high
                 capacity, strict quality control, and skilled workforce
                 delivering durable, reliable solutions.
-              </p> */}
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed border-l-2 border-[#E33534] pl-4">
-    Advanced paint production powered by modern technology, high capacity, strict quality control, and skilled workforce delivering durable, reliable solutions.
-  </p>
+              </p>
             </div>
           </motion.div>
         </div>
