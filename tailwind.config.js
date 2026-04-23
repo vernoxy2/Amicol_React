@@ -27,6 +27,12 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addBase }) {
+      addBase({
+        '*': { 'scrollbar-width': 'none', '-ms-overflow-style': 'none' },
+        '*::-webkit-scrollbar': { 'display': 'none' },
+      });
+    },
+  ],
 }
-
