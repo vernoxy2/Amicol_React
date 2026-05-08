@@ -4,16 +4,30 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { PiMapPinAreaFill } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 import FooterLogo from "../../assets/Footer.svg";
+import { navbarProducts } from "../../Data/NavbarProductsData";
 
 const socials = [
-  { icon: <FaTwitter />, round: "rounded-lg" },
-  { icon: <FaWhatsapp />, round: "rounded-full" },
-  { icon: <FaFacebookF />, round: "rounded-full" },
-  { icon: <AiOutlineInstagram />, round: "rounded-lg" },
+  { icon: <FaTwitter />, round: "rounded-lg", url: "https://twitter.com" },
+  { icon: <FaWhatsapp />, round: "rounded-full", url: "https://wa.me/919898666007" },
+  { icon: <FaFacebookF />, round: "rounded-full", url: "https://facebook.com" },
+  { icon: <AiOutlineInstagram />, round: "rounded-lg", url: "https://instagram.com" },
 ];
 
-const pageLinks = ["Home", "About", "Services", "Products", "Contact"];
+const pageLinks = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Products", path: "/products" },
+  { name: "Contact", path: "/contact" },
+];
+
+const productLinks = navbarProducts.reduce((acc, item) => {
+  if (item.children) {
+    return [...acc, ...item.children];
+  }
+  return [...acc, item];
+}, []);
 
 const Footer = () => {
   return (
@@ -32,7 +46,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
           {/* Logo Section */}
           <div className="space-y-4 text-center sm:text-left">
-            <img src="/Logo.svg" alt="Logo" className="w-44 mx-auto sm:mx-0" />
+            <Link to="/">
+              <img src="/Logo.svg" alt="Logo" className="w-40 mx-auto sm:mx-0" />
+            </Link>
             <p className="text-[#1E1E1E]">
               Let’s connect to collaborate, create impactful projects, and build
               meaningful professional relationships together.
@@ -40,12 +56,15 @@ const Footer = () => {
             <hr className="border-primary w-20 mx-auto sm:mx-0" />
             <div className="flex justify-center sm:justify-start gap-4">
               {socials.map((s, i) => (
-                <div
+                <a
                   key={i}
-                  className={`bg-[#E33534] text-white p-2 text-xl ${s.round}`}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`bg-[#E33534] text-white p-2 text-xl ${s.round} hover:scale-110 transition-transform`}
                 >
                   {s.icon}
-                </div>
+                </a>
               ))}
             </div>
           </div>
@@ -55,23 +74,35 @@ const Footer = () => {
             <h2 className="text-[#E33534] text-2xl font-extrabold mb-3">
               Page Link
             </h2>
-            {pageLinks.map((link) => (
-              <p key={link} className="text-[#1E1E1E]">
-                {link}
-              </p>
-            ))}
+            <div className="flex flex-col space-y-2">
+              {pageLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className="text-[#1E1E1E] hover:text-primary transition-colors w-fit mx-auto sm:mx-0"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* Services */}
           <div className="text-center sm:text-left">
             <h2 className="text-[#E33534] text-2xl font-extrabold mb-3">
-              Services
+              Products
             </h2>
-            {pageLinks.map((link) => (
-              <p key={link} className="text-[#1E1E1E]">
-                {link}
-              </p>
-            ))}
+            <div className="flex flex-col space-y-2">
+              {productLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className="text-[#1E1E1E] hover:text-primary transition-colors text-sm w-fit mx-auto sm:mx-0"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* Contact */}
@@ -95,7 +126,13 @@ const Footer = () => {
                 <BiSolidPhoneCall />
               </div>
               <p>
-                +91-9898666007 <br /> 0260 - 2430294
+                <a href="tel:+919898666007" className="hover:text-primary transition-colors">
+                  +91-9898666007
+                </a>
+                <br />
+                <a href="tel:02602430294" className="hover:text-primary transition-colors">
+                  0260 - 2430294
+                </a>
               </p>
             </div>
 
@@ -103,7 +140,14 @@ const Footer = () => {
               <div className="bg-[#F3F1F1] p-2 text-xl rounded-full text-[#E33534]">
                 <MdEmail />
               </div>
-              <p className="break-all">Mamitchemicalindustries@gmail.com</p>
+              <p className="break-all">
+                <a
+                  href="mailto:amitchemicalindustries@gmail.com"
+                  className="hover:text-primary transition-colors"
+                >
+                  amitchemicalindustries@gmail.com
+                </a>
+              </p>
             </div>
           </div>
         </div>
@@ -120,3 +164,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+

@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Typeof2KEpoxyHBPaints } from "../../../../Data/Typeof2KEpoxyHBPaints";
 import { ProductCards } from "../../../../Components/UI/ProductCards";
 const Epoxy2kHigh = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  }, [location]);
+
   return (
     <section
       id="2k-epoxy-high-build-paints"

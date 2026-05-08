@@ -50,9 +50,9 @@ const GetInTouch = () => {
                   Call Us
                 </h2>
                 <p data-aos="fade-right" data-aos-delay="500" className="text-sm sm:text-base flex flex-wrap items-center gap-2">
-                  <span>+91-9898666007</span>
+                  <a href="tel:+919898666007" className="hover:text-[#E33534] transition-colors">+91-9898666007</a>
                   <span className="hidden sm:inline-block h-4 w-[2px] bg-[#E33534]" />
-                  <span>0260-2430294</span>
+                  <a href="tel:02602430294" className="hover:text-[#E33534] transition-colors">0260-2430294</a>
                 </p>
               </div>
             </div>
@@ -67,9 +67,16 @@ const GetInTouch = () => {
                   Address
                 </h2>
                 <p data-aos="fade-right" data-aos-delay="500" className="text-sm sm:text-base text-gray-700">
-                  Plot No.1101/1/B, Third Phase, G.I.D.C., Vapi-396195,
-                  <br />
-                  Dist. Valsad, Gujarat.
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=Plot+No.1101/1/B,+Third+Phase,+G.I.D.C.,+Vapi-396195,+Dist.+Valsad,+Gujarat" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-[#E33534] transition-colors"
+                  >
+                    Plot No.1101/1/B, Third Phase, G.I.D.C., Vapi-396195,
+                    <br />
+                    Dist. Valsad, Gujarat.
+                  </a>
                 </p>
               </div>
             </div>
@@ -84,7 +91,9 @@ const GetInTouch = () => {
                   Email
                 </h2>
                 <p data-aos="fade-right" data-aos-delay="500" className="text-sm sm:text-base break-all">
-                  Mamitchemicalindustries@gmail.com
+                  <a href="mailto:amitchemicalindustries@gmail.com" className="hover:text-[#E33534] transition-colors">
+                    amitchemicalindustries@gmail.com
+                  </a>
                 </p>
               </div>
             </div>
