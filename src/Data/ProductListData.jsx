@@ -22,7 +22,7 @@ export const ProductListData = [
     id: 3,
     img: Pro3,
     subtext: "[Two Pack System]",
-    name: <>AMICOL <br />POLYURETHANE PAINT</>,
+    name: <>AMICOL <br />EPOXY PAINT</>,
     route: "/products/epoxy-paint#2k-epoxy-paints",
   },
   {
