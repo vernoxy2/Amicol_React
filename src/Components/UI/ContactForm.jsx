@@ -1,20 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import PrimaryBtn from "./PrimaryBtn";
+import Toast from "./Toast";
 
 const initialForm = { name: "", phone: "", email: "", message: "" };
 
 const ContactForm = ({ Btntext }) => {
   const [form, setForm] = useState(initialForm);
-  const [successMessage, setSuccessMessage] = useState("");
+  const [status, setStatus] = useState(""); // "sending" | "success" | "error"
+  const [showToast, setShowToast] = useState(false);
+  const formRef = useRef();
 
   const handleChange = ({ target: { name, value } }) =>
     setForm((prev) => ({ ...prev, [name]: value }));
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form);
-    setSuccessMessage("✅ Message sent successfully!");
-    setForm(initialForm);
+    setStatus("sending");
+    setShowToast(false);
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_phone: form.phone,
+          from_email: form.email,
+          message: form.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setStatus("success");
+        setShowToast(true);
+        setForm(initialForm);
+      })
+      .catch(() => {
+        setStatus("error");
+        setShowToast(true);
+      });
   };
 
   const inputClass =
@@ -22,16 +47,21 @@ const ContactForm = ({ Btntext }) => {
 
   return (
     <div className="w-full bg-[#F3F1F1] rounded-xl p-4 sm:p-6 md:p-8 shadow-sm">
-      <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
-        {successMessage && (
-          <p className="text-sm sm:text-base font-semibold text-green-600">
-            {successMessage}
-          </p>
-        )}
+      <Toast
+        show={showToast}
+        message={
+          status === "success"
+            ? "Message sent successfully!"
+            : "Something went wrong, please try again."
+        }
+        type={status}
+        onClose={() => setShowToast(false)}
+      />
 
+      <form ref={formRef} className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
         {[
-          { name: "name", type: "text", placeholder: "Your Name*" },
-          { name: "phone", type: "tel", placeholder: "Your Phone Number*" },
+          { name: "name",  type: "text",  placeholder: "Your Name*" },
+          { name: "phone", type: "tel",   placeholder: "Your Phone Number*" },
           { name: "email", type: "email", placeholder: "Your Email*" },
         ].map((field) => (
           <input
@@ -59,8 +89,13 @@ const ContactForm = ({ Btntext }) => {
         />
 
         <div data-aos="fade-up" data-aos-delay="500" className="pt-2">
-          <PrimaryBtn  Btntext={Btntext} className="w-full sm:w-auto" />
+          <PrimaryBtn
+            Btntext={status === "sending" ? "Sending..." : Btntext}
+            className="w-full sm:w-auto"
+            disabled={status === "sending"}
+          />
         </div>
+
       </form>
     </div>
   );

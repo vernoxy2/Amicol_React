@@ -5,6 +5,7 @@ import Logo from "/Logoo.svg";
 import LazyImage from "./Components/UI/LazyImage.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ScrollToTop from "./Components/UI/ScrollToTop.jsx";
 
 // ✅ Lazy load pages
 const Homepage = lazy(() => import("./Pages/Homepage/Homepage"));
@@ -43,6 +44,7 @@ const App = () => {
   }, []);
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Layout>
         {/* ✅ Suspense wrapper */}
         <Suspense
